@@ -1,0 +1,214 @@
+
+html{
+  background-color: rgb(41, 128, 185);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+article{
+  background-color: white;
+  padding: 50px;
+}
+
+/* MAIN TITLE *//* MAIN TITLE *//* MAIN TITLE *//* MAIN TITLE *//* MAIN TITLE */
+
+#main-title{
+  /* TEXT */
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 80px;
+  text-align: center;
+  color: rgb(41, 128, 185);
+  /* BACKGROUND */
+  margin: 20px;
+  padding: 10px;
+}
+
+/* RESUABLE TAGS *//* RESUABLE TAGS *//* RESUABLE TAGS *//* RESUABLE TAGS */
+
+.subtitle{
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  color: rgb(31, 97, 141);
+  padding-top: 10px;
+}
+
+.body-text{
+  font-family: 'Barlow', sans-serif;
+  line-height: 1.5;
+}
+
+b{
+  font-weight: 600;
+}
+
+hr{
+  color: rgb(31, 97, 141);
+  border-radius: 60px;
+  border-color: rgb(31, 97, 141);
+  margin-top: 22px;
+  padding: 1px;
+}
+
+/* LINK NAVIGATION *//* LINK NAVIGATION *//* LINK NAVIGATION *//* LINK NAVIGATION */
+
+nav{
+  /* TEXT */
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  color: rgb(41, 128, 185);
+  /* BACKGROUND */
+  margin: 20px;
+  padding: 10px;
+  padding-bottom: 40px;
+}
+
+.links{
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: rgb(41, 128, 185);
+}
+
+.links:hover{
+  background-color: rgb(174, 214, 241);
+}
+
+.links:link{
+  color: rgb(41, 128, 185)
+}
+
+.links:visited{
+  color: rgb(41, 128, 185)
+}
+
+/* PICTURES OF ME *//* PICTURES OF ME *//* PICTURES OF ME *//* PICTURES OF ME */
+
+#pictures-of-me{
+  background-color: rgb(234, 242, 248);
+}
+
+.pictures-of-me{
+  /* DISPLAY */
+  display: inline-block;
+  padding-left: 43.5px;
+  padding-top: 25px;
+  padding-bottom: 21.5px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  /* BACKGROUND */
+  background-color: rgb(234, 242, 248);
+}
+
+/* ASIDE - CONTACT INFO *//* ASIDE - CONTACT INFO *//* ASIDE - CONTACT INFO */
+
+.aside-intro{
+  /* DIMENSIONS */
+  width: 300px;
+  float: right;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-top: 15px;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 25px;
+  /* COLOR */
+  border-left:solid 4px rgb(46, 134, 193);
+  background-color: rgb(234, 242, 248);
+}
+
+.subtitle-aside{
+  font-family: 'Barlow', sans-serif;
+  font-weight: 900;
+  color: rgb(31, 97, 141);
+}
+
+.contact-column1{
+  /* TEXT */
+  font-family: 'Barlow', sans-serif;
+  /* BACKGROUND */
+  padding-right: 40px;
+  padding-bottom: 7px;
+}
+
+.contact-column2{
+  /* TEXT */
+  font-family: 'Barlow', sans-serif;
+}
+
+/* ARTICLE *//* ARTICLE *//* ARTICLE *//* ARTICLE *//* ARTICLE */
+
+article{
+  margin: 15px;
+}
+
+/* INTRODUCTION *//* INTRODUCTION *//* INTRODUCTION *//* INTRODUCTION */
+
+.intro-pictures{
+  /* DISPLAY */
+  padding: 5px;
+  padding-left: 65px;
+}
+
+/* PROFESSIONAL EXPERIENCE *//* PROFESSIONAL EXPERIENCE *//* PROFESSIONAL EXPERIENCE */
+
+.aside-professional{
+  /* DIMENSIONS */
+  width: 300px;
+  float: right;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 200px;
+  margin-top: 15px;
+  margin-right: 15px;
+  margin-left: 15px;
+  /* COLOR */
+  border-left:solid 4px rgb(46, 134, 193);
+  background-color: rgb(234, 242, 248);
+}
+
+/* HOBBY AND INTERESTS *//* HOBBY AND INTERESTS *//* HOBBY AND INTERESTS */
+
+#hobby-table{
+  padding-top: 15px;
+}
+
+.hobby-table-head{
+  text-align: left;
+  background-color: rgb(41, 128, 185);
+  color: white;
+  padding: 10px;
+}
+
+.hobby-table{
+  border: solid 1px;
+  border-color: rgb(212, 230, 241);
+  padding: 10px;
+}
+
+/* FOOTER *//* FOOTER *//* FOOTER *//* FOOTER *//* FOOTER *//* FOOTER *//* FOOTER */
+
+footer{
+  background-color: rgb(127, 179, 213);
+  padding: 20px;
+  margin: 15px;
+  font-family: 'Barlow', sans-serif;
+}
+
+#footer{
+  display: block;
+}
+
+#back-to-top{
+  text-align: left;
+}
+
+#social-media{
+  font-family: 'Barlow', sans-serif;
+  line-height: 1.5;
+  padding-top: 15px;
+}
