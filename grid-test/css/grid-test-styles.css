@@ -1,0 +1,116 @@
+/* THIS WILL BE ON ALL FORMATS */
+.main-wrapper{
+  /* GRID */
+  display: grid;
+}
+.main-header{
+  /* COLOR */
+  background-color: rgb( 36, 113, 163 );
+}
+.main-nav{
+  /* COLOR */
+  background-color: rgb( 127, 179, 213 );
+}
+.main-section{
+  /* COLOR */
+  background-color: rgb( 214, 234, 248 );
+}
+.main-aside{
+  /* COLOR */
+  background-color: rgb( 169, 204, 227 );
+}
+.main-footer{
+  /* COLOR */
+    background-color: rgb( 26, 82, 118 );
+}
+
+@media only screen and (min-width: 480px) {
+  .main-wrapper{
+    /* GRID */
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(5, minmax(100px, auto));
+    grid-gap: 5px;
+  }
+
+  .main-header{
+    /* GRID */
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+  }
+
+  .main-nav{
+    /* GRID */
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+  }
+
+  .main-section{
+    /* GRID */
+    grid-column: 2 / 5;
+    grid-row: 3 / 5;
+  }
+
+  .main-aside{
+    /* GRID */
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+  }
+
+  .main-footer{
+    /* GRID */
+    grid-column: 1 / 5;
+    grid-row: 5 / 6;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .main-wrapper{
+    /* GRID */
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: repeat(12, minmax(50px, auto));
+    grid-gap: 10px;
+  }
+  .main-header{
+    /* GRID */
+    grid-column: 1 / 13;
+    grid-row: 1 / 4;
+    /* COLOR */
+    background-color: rgb( 36, 113, 163 );
+  }
+  .main-nav{
+    /* GRID */
+    grid-column: 1 / 3;
+    grid-row: 4 / 12;
+    /* COLOR */
+    background-color: rgb( 127, 179, 213 );
+    /* DISPLAY */
+  }
+
+  .main-section{
+    /* GRID */
+    grid-column: 3 / 11;
+    grid-row: 4 / 12;
+    /* COLOR */
+    background-color: rgb( 214, 234, 248 );
+  }
+
+  .main-aside{
+    /* GRID */
+    grid-column: 11 / 13;
+    grid-row: 4 / 12;
+    /* COLOR */
+    background-color: rgb( 169, 204, 227 );
+    /* DISPLAY */
+  }
+
+  .main-footer{
+    /* GRID */
+    grid-column: 1 / 13;
+    grid-row: 12 / 13;
+    /* COLOR */
+      background-color: rgb( 26, 82, 118 );
+  }
+}
