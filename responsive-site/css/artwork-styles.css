@@ -1,0 +1,498 @@
+/* CONTENT SHARED IN ALL FORMATS */
+/* MAIN WRAPPER */
+.main-wrapper{
+  /* MAIN GRID */
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto;
+  /* STYLE */
+  font-family: 'Barlow', sans-serif;
+  /* DISPLAY */
+  padding-top: 3.75em;
+  padding-bottom: 3.125em;
+}
+
+/* THE HEADER */
+.main-header{
+  /* MAIN GRID */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* HEADER GRID */
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto;
+}
+.header-title{
+    /* TEXT */
+    text-align: center;
+}
+.header-navigation{
+    /* DISPLAY */
+    text-align: center;
+    grid-row: auto;
+    padding-bottom: 2em;
+  }
+.links{
+    text-decoration: none;
+  }
+.links:hover{
+    background-color: rgb(234, 236, 238);
+    border-radius: 0.5em;
+  }
+.links:link{
+    color: black;
+  }
+.links:visited{
+    color: black;
+  }
+.links-artwork{
+    text-decoration: none;
+    background-color: rgb(234, 236, 238);
+    border-radius: 0.5em;
+  }
+.links-artwork:link{
+    color: black;
+  }
+.links-artwork:visited{
+    color: black;
+  }
+
+/* MAIN ARTWORK CAPTIONS*/
+figcaption{
+  padding-top: 10px;
+  line-height: 1.5;
+}
+.sub-caption{
+  color:  rgb(52, 73, 94);
+}
+
+/* MAIN ARTWORK */
+img {
+    max-width:100%;
+    height:auto;
+}
+#artwork{
+  /* MAIN GRID */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* DISPLAY */
+  display: inline-flex;
+  text-align: center;
+  /* ARTWORK GRID */
+  display: grid;
+  grid-template-columns: repeat(20, minmax(0, 1fr));
+  grid-template-rows: auto;
+}
+#art-9{
+  /* MAIN GRID */
+  grid-row: auto;
+}
+#art-8{
+  /* MAIN GRID */
+  grid-row: auto;
+}
+#art-7{
+  /* MAIN GRID */
+  grid-row: auto;
+}
+#art-6{
+  /* MAIN GRID */
+  grid-row: auto;
+}
+#art-5{
+  /* MAIN GRID */
+  grid-row: auto;
+}
+#art-4{
+  /* MAIN GRID */
+  grid-row: auto;
+}
+#art-3{
+  /* MAIN GRID */
+  grid-row: auto;
+}
+#art-2{
+  /* MAIN GRID */
+  grid-row: auto;
+}
+#art-1{
+  /* MAIN GRID */
+  grid-row: auto;
+}
+
+@media only screen and (min-width: 1em){
+  /* THE HEADER */
+  .header-title{
+      /* HEADER GRID */
+      grid-column: 2 / 12;
+  }
+  .header-navigation{
+      /* HEADER GRID */
+      grid-column: 2 / 12;
+      /* DISPLAY */
+      line-height: 5.625em;
+    }
+  .header-title{
+    /* TEXT */
+    font-size: 2.2em;
+  }
+  .links{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    font-size: 1em;
+  }
+  .links-artwork{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    font-size: 1em;
+  }
+
+  /* MAIN ARTWORK CAPTIONS*/
+  figcaption{
+    font-size: 0.625em;
+  }
+  .sub-caption{
+    font-size: 0.5em;
+  }
+
+  /* MAIN ARTWORK */
+  #art-9{
+    /* MAIN GRID */
+    grid-column: 2 / 11;
+  }
+  #art-8{
+    /* MAIN GRID */
+    grid-column: 11 / 20;
+  }
+  #art-7{
+    /* MAIN GRID */
+    grid-column: 2 / 11;
+  }
+  #art-6{
+    /* MAIN GRID */
+    grid-column: 11 / 20;
+  }
+  #art-5{
+    /* MAIN GRID */
+    grid-column: 2 / 11;
+  }
+  #art-4{
+    /* MAIN GRID */
+    grid-column: 11 / 20;
+  }
+  #art-3{
+    /* MAIN GRID */
+    grid-column: 2 / 11;
+  }
+  #art-2{
+    /* MAIN GRID */
+    grid-column: 11 / 20;
+  }
+  #art-1{
+    /* MAIN GRID */
+    grid-column: 2 / 11;
+  }
+}
+@media only screen and (min-width: 40em){
+  /* THE HEADER */
+  .header-title{
+      /* HEADER GRID */
+      grid-column: 2 / 12;
+  }
+  .header-navigation{
+      /* HEADER GRID */
+      grid-column: 2 / 12;
+      /* DISPLAY */
+      line-height: 5.625em;
+    }
+  .header-title{
+    /* TEXT */
+    font-size: 3em;
+  }
+  .links{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .links-artwork{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  /* MAIN ARTWORK CAPTIONS*/
+  figcaption{
+    font-size: 14px;
+  }
+  .sub-caption{
+    font-size: 13px;
+  }
+
+  /* MAIN ARTWORK */
+  #art-9{
+    /* MAIN GRID */
+    grid-column: 2 / 11;
+  }
+  #art-8{
+    /* MAIN GRID */
+    grid-column: 11 / 20;
+  }
+  #art-7{
+    /* MAIN GRID */
+    grid-column: 2 / 11;
+  }
+  #art-6{
+    /* MAIN GRID */
+    grid-column: 11 / 20;
+  }
+  #art-5{
+    /* MAIN GRID */
+    grid-column: 2 / 11;
+  }
+  #art-4{
+    /* MAIN GRID */
+    grid-column: 11 / 20;
+  }
+  #art-3{
+    /* MAIN GRID */
+    grid-column: 2 / 11;
+  }
+  #art-2{
+    /* MAIN GRID */
+    grid-column: 11 / 20;
+  }
+  #art-1{
+    /* MAIN GRID */
+    grid-column: 2 / 11;
+  }
+}
+@media only screen and (min-width: 55em){
+  /* THE HEADER */
+  .header-title{
+      /* HEADER GRID */
+      grid-column: 2 / 12;
+  }
+  .header-navigation{
+      /* HEADER GRID */
+      grid-column: 2 / 12;
+      /* DISPLAY */
+      line-height: 5.625em;
+    }
+  .header-title{
+    /* TEXT */
+    font-size: 3em;
+  }
+  .links{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .links-artwork{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  /* MAIN ARTWORK CAPTIONS*/
+  figcaption{
+    font-size: 17px;
+  }
+  .sub-caption{
+    font-size: 15px;
+  }
+
+  /* MAIN ARTWORK */
+  #art-9{
+    /* MAIN GRID */
+    grid-column: 2 / 11;
+  }
+  #art-8{
+    /* MAIN GRID */
+    grid-column: 11 / 20;
+  }
+  #art-7{
+    /* MAIN GRID */
+    grid-column: 2 / 11;
+  }
+  #art-6{
+    /* MAIN GRID */
+    grid-column: 11 / 20;
+  }
+  #art-5{
+    /* MAIN GRID */
+    grid-column: 2 / 11;
+  }
+  #art-4{
+    /* MAIN GRID */
+    grid-column: 11 / 20;
+  }
+  #art-3{
+    /* MAIN GRID */
+    grid-column: 2 / 11;
+  }
+  #art-2{
+    /* MAIN GRID */
+    grid-column: 11 / 20;
+  }
+  #art-1{
+    /* MAIN GRID */
+    grid-column: 2 / 11;
+  }
+}
+@media only screen and (min-width: 65em){
+  /* THE HEADER */
+  .header-title{
+      /* HEADER GRID */
+      grid-column: 2 / 6;
+  }
+  .header-navigation{
+      /* HEADER GRID */
+      grid-column: 8 / 12;
+      /* DISPLAY */
+      line-height: 5.625em;
+    }
+  .header-title{
+    /* TEXT */
+    font-size: 2.8em;
+  }
+  .links{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .links-artwork{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  /* MAIN ARTWORK CAPTIONS*/
+  figcaption{
+    font-size: 15px;
+  }
+  .sub-caption{
+    font-size: 14px;
+  }
+
+  /* MAIN ARTWORK */
+  #art-9{
+    /* MAIN GRID */
+    grid-column: 2 / 8;
+  }
+  #art-8{
+    /* MAIN GRID */
+    grid-column: 8 / 14;
+  }
+  #art-7{
+    /* MAIN GRID */
+    grid-column: 14 / 20;
+  }
+  #art-6{
+    /* MAIN GRID */
+    grid-column: 2 / 8;
+  }
+  #art-5{
+    /* MAIN GRID */
+    grid-column: 8 / 14;
+  }
+  #art-4{
+    /* MAIN GRID */
+    grid-column: 14 / 20;
+  }
+  #art-3{
+    /* MAIN GRID */
+    grid-column: 2 / 8;
+  }
+  #art-2{
+    /* MAIN GRID */
+    grid-column: 8 / 14;
+  }
+  #art-1{
+    /* MAIN GRID */
+    grid-column: 14 / 20;
+  }
+}
+@media only screen and (min-width: 75em){
+  /* THE HEADER */
+  .header-title{
+      /* HEADER GRID */
+      grid-column: 2 / 6;
+      /* TEXT */
+  }
+  .header-navigation{
+      /* HEADER GRID */
+      grid-column: 8 / 12;
+      /* DISPLAY */
+      line-height: 5.625em;
+    }
+  .header-title{
+    /* TEXT */
+    font-size: 3.125em;
+  }
+  .links{
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .links-artwork{
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .header-navigation{
+      /* HEADER GRID */
+      grid-column: 8 / 12;
+      /* DISPLAY */
+      line-height: 5.625em;
+    }
+  .header-title{
+    /* TEXT */
+    font-size: 3.125em;
+  }
+  .links{
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .links-artwork{
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  /* MAIN ARTWORK CAPTIONS*/
+  figcaption{
+    font-size: 17px;
+  }
+  .sub-caption{
+    font-size: 14px;
+  }
+
+  /* MAIN ARTWORK */
+  #art-9{
+    /* MAIN GRID */
+    grid-column: 2 / 8;
+  }
+  #art-8{
+    /* MAIN GRID */
+    grid-column: 8 / 14;
+  }
+  #art-7{
+    /* MAIN GRID */
+    grid-column: 14 / 20;
+  }
+  #art-6{
+    /* MAIN GRID */
+    grid-column: 2 / 8;
+  }
+  #art-5{
+    /* MAIN GRID */
+    grid-column: 8 / 14;
+  }
+  #art-4{
+    /* MAIN GRID */
+    grid-column: 14 / 20;
+  }
+  #art-3{
+    /* MAIN GRID */
+    grid-column: 2 / 8;
+  }
+  #art-2{
+    /* MAIN GRID */
+    grid-column: 8 / 14;
+  }
+  #art-1{
+    /* MAIN GRID */
+    grid-column: 14 / 20;
+  }
+}
