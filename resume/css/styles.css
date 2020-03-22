@@ -10,6 +10,21 @@
   grid-template-rows: auto;
 }
 
+/* UNIVERSAL */
+img {
+    max-width:100%;
+    height:auto;
+    padding: 1em;
+}
+.subtitle{
+  /* GRID */
+  grid-column: 1 / 13;
+  /* FONT */
+  font-weight: 600;
+  font-size: 1.3em;
+
+}
+
 /* HEADER */
 #home{
   /* GRID */
@@ -24,25 +39,15 @@
   color: rgb( 234, 236, 238 );
   /* DISPLAY */
   border-radius: 0.5em;
-  display: inline-grid;
 }
 .header-title{
   /* GRID */
-  grid-column: 1 / 6;
   grid-row: auto;
-  /* DISPLAY */
-  font-size: 1.5em;
-  padding: 0.5em;
-  padding-left: 2em;
 }
 .header-navigation{
   /* GRID */
-  grid-column: 6 / 13;
   grid-row: auto;
-  /* DISPLAY */
-  padding: 0.8em;
   /* TEXT */
-  font-size: 1.2em;
   text-align: center;
 }
 .links{
@@ -71,51 +76,9 @@
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: auto;
 }
-.profile-picture{
-  /* PROFILE GRID */
-  grid-column: 3 / 6;
-  /* DISPLAY */
-  padding-top: 5em;
-  padding-bottom: 5em;
-  padding-right: 0.5em;
-}
 #profile-picture{
   /* DISPLAY */
-  float: right;
   border-radius: 100%;
-}
-.profile-text{
-  /* PROFILE GRID */
-  grid-column: 6 / 11;
-  /* DISPLAY */
-  padding-top: 12em;
-  padding-bottom: 6em;
-  padding-right: 2em;
-  padding-left: 1.5em;
-  /* TEXT */
-  font-size:
-}
-#name{
-  /* TEXT */
-  font-size: 3em;
-}
-#resume{
-  /* TEXT */
-  font-size: 1.3em;
-  /* DISPLAY */
-  padding-left: 1em;
-}
-
-/* UNIVERSAL */
-.subtitle{
-  font-weight: 600;
-  font-size: 1.3em;
-  grid-column: 1 / 13;
-}
-img {
-    max-width:100%;
-    height:auto;
-    padding: 1em;
 }
 
 /* INTRODUCTION */
@@ -127,8 +90,6 @@ img {
   background-color: rgb( 213, 216, 220 );
   /* DISPLAY */
   border-radius: 1.5em;
-  padding: 2em;
-  margin: 1em;
 }
 .introduction-images{
   /* GRID */
@@ -139,22 +100,15 @@ img {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: auto;
   /* DISPLAY */
-  padding: 2em;
   text-align: center;
 }
 #introduction-image-1{
   /* INTRO IMAGE GRID */
-  grid-column: 3 / 7;
   grid-row: auto;
-  /* DISPLAY */
-  padding-right: 2em;
 }
 #introduction-image-2{
   /* INTRO IMAGE GRID */
-  grid-column: 7 / 11;
   grid-row: auto;
-  /* DISPLAY */
-  padding-left: 2em;
 }
 
 /* PROFESSIONAL EXPERIENCE */
@@ -170,50 +124,14 @@ img {
   background-color: rgb( 213, 216, 220 );
   /* DISPLAY */
   border-radius: 1.5em;
-  padding: 2em;
-  margin: 1em;
 }
 #professional-experience-aside{
   /* PROFESSIONAL EXPERIENCE GRID */
-  grid-column: 9 / 13;
   grid-row: auto;
-}
-.professional-experience-aside-sections{
-  /* DISPLAY */
-  border-left:solid 4px rgb( 23, 32, 42 );
-  border-top:solid 1px rgb( 23, 32, 42 );
-  border-right:solid 1px rgb( 23, 32, 42 );
-  border-bottom:solid 4px rgb( 23, 32, 42 );
-  border-radius: 0.5em;
-  margin-bottom: 2.5em;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-.contact-column{
-  /* DISPLAY */
-  padding-right: 1em;
-  padding-bottom: 1em;
 }
 #professional-experience-text{
   /* PROFESSIONAL EXPERIENCE GRID */
-  grid-column: 1 / 9;
   grid-row: auto;
-  /* DISPLAY */
-  padding-right: 3em;
-  padding-left: 0.5em;
-}
-
-/* PICTURES OF ME */
-#pictures-of-me-main-wrapper{
-  /* GRID */
-  grid-column: 2 / 12;
-  grid-row: auto;
-  /* DISPLAY */
-  padding: 2em;
-  display: inline-flex;
-}
-#pictures-of-me{
-  padding-right: 4em;
 }
 
 /* HOBBIES AND INTERESTS */
@@ -229,15 +147,6 @@ img {
   background-color: rgb( 213, 216, 220 );
   /* DISPLAY */
   border-radius: 1.5em;
-  padding: 2em;
-  margin: 1em;
-}
-#hobby-table{
-  /* HOBBIES AND INTERESTS GRID */
-  grid-column: 2 / 12;
-  grid-row: auto;
-  /* DISPLAY */
-  padding-top: 15px;
 }
 .hobby-table-head{
   text-align: left;
@@ -251,6 +160,10 @@ img {
   background-color: rgb( 234, 236, 238 );
   padding: 10px;
 }
+#hobby-table{
+  /* HOBBIES AND INTERESTS GRID */
+  grid-row: auto;
+}
 
 /* SOCIAL MEDIA */
 #social-media{
@@ -261,8 +174,6 @@ img {
   background-color: rgb( 213, 216, 220 );
   /* DISPLAY */
   border-radius: 1.5em;
-  padding: 2em;
-  margin: 1em;
 }
 .links-social-media{
   text-decoration: none;
@@ -292,4 +203,800 @@ img {
   border-radius: 0.5em;
   padding: 1em;
   margin-top: 1em;
+}
+
+@media only screen and (min-width: 1em){
+  /* HEADER */
+  .header-title{
+    /* GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    font-size:1.5em;
+    padding: 0.5em;
+    text-align: center;
+  }
+  .header-navigation{
+    /* GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    padding-bottom: 2em;
+    /* TEXT */
+    font-size: 0.6em;
+  }
+
+  /* MAIN PROFILE */
+  .profile-picture{
+    /* PROFILE GRID */
+    grid-column: 3 / 11;
+    /* DISPLAY */
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 2em;
+  }
+  #profile-picture{
+    width: 50em;
+  }
+  .profile-text{
+    /* PROFILE GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    padding-bottom: 1em;
+    text-align: center;
+  }
+  #name{
+    /* TEXT */
+    font-size: 2em;
+  }
+  #resume{
+    /* TEXT */
+    font-size: 1em;
+    /* DISPLAY */
+    padding-bottom: 1em;
+  }
+
+  /* INTRODUCTION */
+  #introduction{
+    /* DISPLAY */
+    padding: 1.5em;
+    margin: 0.5em;
+  }
+  .introduction-images{
+    /* DISPLAY */
+    padding: 1em;
+  }
+  #introduction-image-1{
+    /* INTRO IMAGE GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    padding-right: 2em;
+  }
+  #introduction-image-2{
+    /* INTRO IMAGE GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    padding-right: 2em;
+  }
+
+  /* PROFESSIONAL EXPERIENCE */
+  #professional-experience{
+    /* DISPLAY */
+    padding: 1.5em;
+    margin: 0.5em;
+  }
+  #professional-experience-aside{
+    /* PROFESSIONAL EXPERIENCE GRID */
+    grid-column: 1 / 13;
+  }
+  .professional-experience-aside-sections{
+    /* DISPLAY */
+    border-left:solid 4px rgb( 23, 32, 42 );
+    border-top:solid 1px rgb( 23, 32, 42 );
+    border-right:solid 1px rgb( 23, 32, 42 );
+    border-bottom:solid 4px rgb( 23, 32, 42 );
+    border-radius: 0.5em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .contact-column{
+    /* DISPLAY */
+    padding-right: 1em;
+    padding-bottom: 1em;
+  }
+  #professional-experience-text{
+    /* PROFESSIONAL EXPERIENCE GRID */
+    grid-column: 1 / 13;
+  }
+
+  /* HOBBIES AND INTERESTS */
+  #hobbies-and-interests{
+    /* DISPLAY */
+    padding: 1.5em;
+    margin: 0.5em;
+  }
+  #hobby-table{
+    /* HOBBIES AND INTERESTS GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    table-layout: auto;
+  }
+
+  /* SOCIAL MEDIA */
+  #social-media{
+    /* DISPLAY */
+    padding: 1em;
+    margin: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 33em){
+  /* HEADER */
+  .header-title{
+    /* GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    font-size:1.5em;
+    padding: 0.5em;
+    text-align: center;
+  }
+  .header-navigation{
+    /* GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    padding: 0.35em;
+    padding-bottom: 2em;
+    /* TEXT */
+    font-size: 0.8em;
+  }
+
+  /* MAIN PROFILE */
+  .profile-picture{
+    /* PROFILE GRID */
+    grid-column: 3 / 11;
+    /* DISPLAY */
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 2em;
+  }
+  #profile-picture{
+    width: 50em;
+  }
+  .profile-text{
+    /* PROFILE GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    padding-bottom: 1em;
+    text-align: center;
+  }
+  #name{
+    /* TEXT */
+    font-size: 1.75em;
+  }
+  #resume{
+    /* TEXT */
+    font-size: 1em;
+    /* DISPLAY */
+    padding-bottom: 0.45em;
+  }
+
+  /* INTRODUCTION */
+  #introduction{
+    /* DISPLAY */
+    padding: 1em;
+    margin: 0.5em;
+  }
+  .introduction-images{
+    /* DISPLAY */
+    padding: 0.5em;
+  }
+  #introduction-image-1{
+    /* INTRO IMAGE GRID */
+    grid-column: 1 / 13;
+  }
+  #introduction-image-2{
+    /* INTRO IMAGE GRID */
+    grid-column: 1 / 13;
+  }
+
+  /* PROFESSIONAL EXPERIENCE */
+  #professional-experience{
+    /* DISPLAY */
+    padding: 1em;
+    margin: 0.5em;
+  }
+  #professional-experience-aside{
+    /* PROFESSIONAL EXPERIENCE GRID */
+    grid-column: 1 / 13;
+  }
+  .professional-experience-aside-sections{
+    /* DISPLAY */
+    border-left:solid 4px rgb( 23, 32, 42 );
+    border-top:solid 1px rgb( 23, 32, 42 );
+    border-right:solid 1px rgb( 23, 32, 42 );
+    border-bottom:solid 4px rgb( 23, 32, 42 );
+    border-radius: 0.5em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .contact-column{
+    /* DISPLAY */
+    padding-right: 1em;
+    padding-bottom: 1em;
+  }
+  #professional-experience-text{
+    /* PROFESSIONAL EXPERIENCE GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    padding-right: 3em;
+    padding-left: 0.5em;
+  }
+
+  /* HOBBIES AND INTERESTS */
+  #hobbies-and-interests{
+    /* DISPLAY */
+    padding: 1em;
+    margin: 0.5em;
+  }
+  #hobby-table{
+    /* HOBBIES AND INTERESTS GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    padding-top: 15px;
+    table-layout: fixed;
+  }
+
+  /* SOCIAL MEDIA */
+  #social-media{
+    /* DISPLAY */
+    padding: 1em;
+    margin: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 43em){
+  /* HEADER */
+  .header-title{
+    /* GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    font-size:1.5em;
+    padding: 0.5em;
+    text-align: center;
+  }
+  .header-navigation{
+    /* GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    padding: 1em;
+    padding-bottom: 2em;
+    /* TEXT */
+    font-size: 1em;
+  }
+
+  /* MAIN PROFILE */
+  .profile-picture{
+    /* PROFILE GRID */
+    grid-column: 3 / 11;
+    /* DISPLAY */
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 2em;
+  }
+  #profile-picture{
+    width: 50em;
+  }
+  .profile-text{
+    /* PROFILE GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    padding-bottom: 1em;
+    text-align: center;
+  }
+  #name{
+    /* TEXT */
+    font-size: 3.5em;
+  }
+  #resume{
+    /* TEXT */
+    font-size: 1.5em;
+    /* DISPLAY */
+    padding-bottom: 1em;
+  }
+
+  /* INTRODUCTION */
+  #introduction{
+    /* DISPLAY */
+    padding: 2em;
+    margin: 0.5em;
+  }
+  .introduction-images{
+    /* DISPLAY */
+    padding: 2em;
+  }
+  #introduction-image-1{
+    /* INTRO IMAGE GRID */
+    grid-column: 2 / 7;
+    /* DISPLAY */
+    padding-right: 2em;
+  }
+  #introduction-image-2{
+    /* INTRO IMAGE GRID */
+    grid-column: 7 / 12;
+    /* DISPLAY */
+    padding-right: 2em;
+  }
+
+  /* PROFESSIONAL EXPERIENCE */
+  #professional-experience{
+    /* DISPLAY */
+    padding: 2em;
+    margin: 0.5em;
+  }
+  #professional-experience-aside{
+    /* PROFESSIONAL EXPERIENCE GRID */
+    grid-column: 1 / 13;
+  }
+  .professional-experience-aside-sections{
+    /* DISPLAY */
+    border-left:solid 4px rgb( 23, 32, 42 );
+    border-top:solid 1px rgb( 23, 32, 42 );
+    border-right:solid 1px rgb( 23, 32, 42 );
+    border-bottom:solid 4px rgb( 23, 32, 42 );
+    border-radius: 0.5em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .contact-column{
+    /* DISPLAY */
+    padding-right: 1em;
+    padding-bottom: 1em;
+  }
+  #professional-experience-text{
+    /* PROFESSIONAL EXPERIENCE GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    padding-right: 2em;
+    padding-left: 0.5em;
+  }
+
+  /* HOBBIES AND INTERESTS */
+  #hobbies-and-interests{
+    /* DISPLAY */
+    padding: 1em;
+    margin: 0.5em;
+  }
+  #hobby-table{
+    /* HOBBIES AND INTERESTS GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    padding-top: 15px;
+    table-layout: fixed;
+  }
+
+  /* SOCIAL MEDIA */
+  #social-media{
+    /* DISPLAY */
+    padding: 1em;
+    margin: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 45em){
+  /* HEADER */
+  #home{
+    /* DISPLAY */
+    display: inline-grid;
+  }
+  .header-title{
+    /* GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    font-size:1.5em;
+    padding: 0.5em;
+    text-align: center;
+  }
+  .header-navigation{
+    /* GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    padding: 1em;
+    /* TEXT */
+    font-size: 1em;
+  }
+
+  /* MAIN PROFILE */
+  .profile-picture{
+    /* PROFILE GRID */
+    grid-column: 4 / 10;
+    /* DISPLAY */
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 2em;
+  }
+  #profile-picture{
+    width: 50em;
+  }
+  .profile-text{
+    /* PROFILE GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    padding-bottom: 1em;
+    text-align: center;
+  }
+  #name{
+    /* TEXT */
+    font-size: 4em;
+  }
+  #resume{
+    /* TEXT */
+    font-size: 2em;
+    /* DISPLAY */
+    padding-bottom: 1em;
+  }
+
+  /* INTRODUCTION */
+  #introduction{
+    /* DISPLAY */
+    padding: 2em;
+    margin: 0.5em;
+  }
+  .introduction-images{
+    /* DISPLAY */
+    padding: 2em;
+  }
+  #introduction-image-1{
+    /* INTRO IMAGE GRID */
+    grid-column: 2 / 7;
+    /* DISPLAY */
+    padding-right: 2em;
+  }
+  #introduction-image-2{
+    /* INTRO IMAGE GRID */
+    grid-column: 7 / 12;
+    /* DISPLAY */
+    padding-right: 2em;
+  }
+
+  /* PROFESSIONAL EXPERIENCE */
+  #professional-experience{
+    /* DISPLAY */
+    padding: 2em;
+    margin: 0.5em;
+  }
+  #professional-experience-aside{
+    /* PROFESSIONAL EXPERIENCE GRID */
+    grid-column: 9 / 13;
+  }
+  .professional-experience-aside-sections{
+    /* DISPLAY */
+    border-left:solid 4px rgb( 23, 32, 42 );
+    border-top:solid 1px rgb( 23, 32, 42 );
+    border-right:solid 1px rgb( 23, 32, 42 );
+    border-bottom:solid 4px rgb( 23, 32, 42 );
+    border-radius: 0.5em;
+    margin-bottom: 2.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .contact-column{
+    /* DISPLAY */
+    padding-right: 0.2em;
+    padding-bottom: 1em;
+  }
+  #professional-experience-text{
+    /* PROFESSIONAL EXPERIENCE GRID */
+    grid-column: 1 / 9;
+    /* DISPLAY */
+    padding-right: 3em;
+    padding-left: 0.5em;
+  }
+
+  /* HOBBIES AND INTERESTS */
+  #hobbies-and-interests{
+    /* DISPLAY */
+    padding: 2em;
+    margin: 0.5em;
+  }
+  #hobby-table{
+    /* HOBBIES AND INTERESTS GRID */
+    grid-column: 1 / 13;
+    /* DISPLAY */
+    padding-top: 15px;
+    table-layout: fixed;
+  }
+
+  /* SOCIAL MEDIA */
+  #social-media{
+    /* DISPLAY */
+    padding: 2em;
+    margin: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 65em){
+  /* HEADER */
+  #home{
+    /* DISPLAY */
+    display: inline-grid;
+  }
+  .header-title{
+    /* GRID */
+    grid-column: 1 / 5;
+    /* DISPLAY */
+    font-size: 1.5em;
+    padding: 0.5em;
+    padding-left: 2em;
+  }
+  .header-navigation{
+    /* GRID */
+    grid-column: 5 / 13;
+    /* DISPLAY */
+    padding: 1em;
+    /* TEXT */
+    font-size: 1em;
+  }
+
+  /* UNIVERSAL */
+  img {
+    max-width:100%;
+    height:auto;
+    padding: 1em;
+  }
+
+  /* MAIN PROFILE */
+  .profile-picture{
+    /* PROFILE GRID */
+    grid-column: 3 / 6;
+    /* DISPLAY */
+    padding-top: 5em;
+    padding-bottom: 5em;
+    padding-right: 0.5em;
+  }
+  #profile-picture{
+    /* DISPLAY */
+    float: right;
+  }
+  .profile-text{
+    /* PROFILE GRID */
+    grid-column: 6 / 12;
+    /* DISPLAY */
+    padding-top: 12em;
+    padding-bottom: 6em;
+    padding-right: 2em;
+    padding-left: 1.5em;
+  }
+  #name{
+    /* TEXT */
+    font-size: 2.75em;
+  }
+  #resume{
+    /* TEXT */
+    font-size: 1.3em;
+    /* DISPLAY */
+    padding-left: 1em;
+  }
+
+  /* INTRODUCTION */
+  #introduction{
+    /* DISPLAY */
+    padding: 2em;
+    margin: 0.5em;
+  }
+  .introduction-images{
+    /* DISPLAY */
+    padding: 2em;
+  }
+  #introduction-image-1{
+    /* INTRO IMAGE GRID */
+    grid-column: 1 / 7;
+    /* DISPLAY */
+    padding-right: 2em;
+  }
+  #introduction-image-2{
+    /* INTRO IMAGE GRID */
+    grid-column: 7 / 13;
+    /* DISPLAY */
+    padding-right: 2em;
+  }
+
+  /* PROFESSIONAL EXPERIENCE */
+  #professional-experience{
+    /* DISPLAY */
+    padding: 2em;
+    margin: 0.5em;
+  }
+  #professional-experience-aside{
+    /* PROFESSIONAL EXPERIENCE GRID */
+    grid-column: 9 / 13;
+  }
+  .professional-experience-aside-sections{
+    /* DISPLAY */
+    border-left:solid 4px rgb( 23, 32, 42 );
+    border-top:solid 1px rgb( 23, 32, 42 );
+    border-right:solid 1px rgb( 23, 32, 42 );
+    border-bottom:solid 4px rgb( 23, 32, 42 );
+    border-radius: 0.5em;
+    margin-bottom: 2.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .contact-column{
+    /* DISPLAY */
+    padding-right: 1em;
+    padding-bottom: 1em;
+  }
+  #professional-experience-text{
+    /* PROFESSIONAL EXPERIENCE GRID */
+    grid-column: 1 / 9;
+    /* DISPLAY */
+    padding-right: 3em;
+    padding-left: 0.5em;
+  }
+
+  /* HOBBIES AND INTERESTS */
+  #hobbies-and-interests{
+    /* DISPLAY */
+    padding: 2em;
+    margin: 0.5em;
+  }
+  #hobby-table{
+    /* HOBBIES AND INTERESTS GRID */
+    grid-column: 2 / 12;
+    /* DISPLAY */
+    padding-top: 15px;
+    table-layout: fixed;
+  }
+
+  /* SOCIAL MEDIA */
+  #social-media{
+    /* DISPLAY */
+    padding: 2em;
+    margin: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 75em){
+  /* HEADER */
+  #home{
+    /* DISPLAY */
+    display: inline-grid;
+  }
+  .header-title{
+    /* GRID */
+    grid-column: 1 / 6;
+    /* DISPLAY */
+    font-size: 1.5em;
+    padding: 0.5em;
+    padding-left: 2em;
+  }
+  .header-navigation{
+    /* GRID */
+    grid-column: 6 / 13;
+    /* DISPLAY */
+    padding: 1em;
+    /* TEXT */
+    font-size: 1em;
+  }
+
+  /* UNIVERSAL */
+  img {
+    max-width:100%;
+    height:auto;
+    padding: 1em;
+  }
+
+  /* MAIN PROFILE */
+  .profile-picture{
+    /* PROFILE GRID */
+    grid-column: 3 / 6;
+    /* DISPLAY */
+    padding-top: 5em;
+    padding-bottom: 5em;
+    padding-right: 0.5em;
+  }
+  #profile-picture{
+    /* DISPLAY */
+    float: right;
+  }
+  .profile-text{
+    /* PROFILE GRID */
+    grid-column: 6 / 12;
+    /* DISPLAY */
+    padding-top: 12em;
+    padding-bottom: 6em;
+    padding-right: 2em;
+    padding-left: 1.5em;
+  }
+  #name{
+    /* TEXT */
+    font-size: 3em;
+  }
+  #resume{
+    /* TEXT */
+    font-size: 1.3em;
+    /* DISPLAY */
+    padding-left: 1em;
+  }
+
+  /* INTRODUCTION */
+  #introduction{
+    /* DISPLAY */
+    padding: 2em;
+    margin: 0.5em;
+  }
+  .introduction-images{
+    /* DISPLAY */
+    padding: 2em;
+  }
+  #introduction-image-1{
+    /* INTRO IMAGE GRID */
+    grid-column: 1 / 7;
+    /* DISPLAY */
+    padding-right: 2em;
+  }
+  #introduction-image-2{
+    /* INTRO IMAGE GRID */
+    grid-column: 7 / 13;
+    /* DISPLAY */
+    padding-left: 2em;
+  }
+
+  /* PROFESSIONAL EXPERIENCE */
+  #professional-experience{
+    /* DISPLAY */
+    padding: 2em;
+    margin: 0.5em;
+  }
+  #professional-experience-aside{
+    /* PROFESSIONAL EXPERIENCE GRID */
+    grid-column: 9 / 13;
+  }
+  .professional-experience-aside-sections{
+    /* DISPLAY */
+    border-left:solid 4px rgb( 23, 32, 42 );
+    border-top:solid 1px rgb( 23, 32, 42 );
+    border-right:solid 1px rgb( 23, 32, 42 );
+    border-bottom:solid 4px rgb( 23, 32, 42 );
+    border-radius: 0.5em;
+    margin-bottom: 2.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .contact-column{
+    /* DISPLAY */
+    padding-right: 1em;
+    padding-bottom: 1em;
+  }
+  #professional-experience-text{
+    /* PROFESSIONAL EXPERIENCE GRID */
+    grid-column: 1 / 9;
+    /* DISPLAY */
+    padding-right: 3em;
+    padding-left: 0.5em;
+  }
+
+  /* HOBBIES AND INTERESTS */
+  #hobbies-and-interests{
+    /* DISPLAY */
+    padding: 2em;
+    margin: 0.5em;
+  }
+  #hobby-table{
+    /* HOBBIES AND INTERESTS GRID */
+    grid-column: 2 / 12;
+    /* DISPLAY */
+    padding-top: 15px;
+  }
+
+  /* SOCIAL MEDIA */
+  #social-media{
+    /* DISPLAY */
+    padding: 2em;
+    margin: 0.5em;
+  }
 }
