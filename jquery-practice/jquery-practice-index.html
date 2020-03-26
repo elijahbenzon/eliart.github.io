@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQUERY Practice</title>
+  </head>
+  <style media="screen">
+    .dynamicClass{
+      font-size:30px;
+    }
+  </style>
+  <body>
+    <h1>DOM Test</h1>
+    <p>Text</p>
+    <p class="text-demo">This is the text demo</p>
+    <p class="text-demo1"></p>
+    <p class="TestId">This is a test</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+      $(".text-demo1").html("I'm using JQuery now");
+      $(".text-demo1").css("color", "red");
+      $(".text-demo").addClass("dynamicClass");
+
+      });
+    </script>
+  </body>
+</html>
