@@ -1,0 +1,98 @@
+/* main content - shared on all formats */
+/* main */
+.main-wrapper{
+  /* main wrapper grid */
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto;
+  /* fonts */
+  font-family: 'Barlow', sans-serif;
+}
+/* header */
+.main-header-wrapper{
+  /* main wrapper grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* main header grid */
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto;
+  /* styling */
+  background-color: rgb( 23, 32, 42 );
+  border-radius: 0.3em;
+  color: rgb( 234, 236, 238 );
+  font-weight: 600;
+  /* display */
+  display: inline-flex;
+  padding-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 1em;
+}
+.main-header-title{
+  /* main wrapper grid */
+  grid-column: 2 / 12;
+  grid-row: auto;
+  /* display */
+  padding-left: 8em;
+  padding-right: 15em;
+}
+.main-header-navigation{
+  /* main wrapper grid */
+  grid-column: 2 / 12;
+  grid-row: auto;
+}
+.links{
+  text-decoration: none;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.links:hover{
+  background-color: rgb( 44, 62, 80 );
+  border-radius: 0.5em;
+}
+.links:link{
+  color: rgb( 234, 236, 238 );
+}
+.links:visited{
+  color: rgb( 234, 236, 238 );
+}
+/* introduction */
+#introduction{
+  /* main wrapper grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* introduction grid */
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto;
+  /* display */
+  padding-top: 3em;
+}
+.introduction-title{
+  /* introduction grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* font */
+  font-size: 3em;
+  /* display */
+  text-align: center;
+  padding-bottom: 1em;
+}
+.introduction-image{
+  /* introduction grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2em;
+}
+.introduction-paragraph{
+  /* introduction grid */
+  grid-column: 3 / 11;
+  grid-row: auto;
+  /* display */
+  padding-bottom: 1em;
+}
