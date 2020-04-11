@@ -42,9 +42,9 @@ img {
   grid-row: auto;
   /* display */
   padding-left: 8em;
-  padding-right: 15em;
+  padding-right: 39em;
 }
-.main-header-navigation{
+#home{
   /* main wrapper grid */
   grid-column: 2 / 12;
   grid-row: auto;
@@ -407,4 +407,74 @@ button:hover{
   padding: 1em;
   position: absolute;
   width: 16em;
+}
+
+/* tips */
+.tips-main-wrapper{
+  /* main wrapper grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* things to do grid */
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto;
+  /* display */
+  padding-top: 4em;
+}
+#tips{
+  /* things to do grid */
+  grid-column: 3 / 11;
+  grid-row: auto;
+}
+.picked-question{
+  font-size: 1.25em;
+}
+.tips-question-1{
+  /* things to do grid */
+  grid-column: 3 / 11;
+  grid-row: auto;
+}
+.question-1{
+  padding-right: 1em;
+}
+.answer-1{
+  display: none;
+  padding-top: 1em;
+}
+.tips-question-2{
+  /* things to do grid */
+  grid-column: 3 / 11;
+  grid-row: auto;
+}
+.question-2{
+  padding-right: 1em;
+}
+.answer-2{
+  display: none;
+}
+.tips-question-3{
+  /* things to do grid */
+  grid-column: 3 / 11;
+  grid-row: auto;
+}
+.question-3{
+  padding-right: 1em;
+}
+.answer-3{
+  display: none;
+  padding-top: 1em;
+}
+
+/* footer */
+#footer{
+  /* grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* style */
+  background-color: rgb( 23, 32, 42 );
+  color: rgb( 234, 236, 238 );
+  /* display */
+  border-radius: 0.5em;
+  padding: 1em;
+  margin-top: 5em;
 }
