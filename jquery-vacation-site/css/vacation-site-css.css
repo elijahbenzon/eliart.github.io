@@ -1,4 +1,5 @@
 /* main content - shared on all formats */
+
 /* main */
 .main-wrapper{
   /* main wrapper grid */
@@ -7,7 +8,13 @@
   grid-template-rows: auto;
   /* fonts */
   font-family: 'Barlow', sans-serif;
+  line-height: 1.5em;
 }
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 /* header */
 .main-header-wrapper{
   /* main wrapper grid */
@@ -50,6 +57,7 @@
 .links:hover{
   background-color: rgb( 44, 62, 80 );
   border-radius: 0.5em;
+  cursor: pointer;
 }
 .links:link{
   color: rgb( 234, 236, 238 );
@@ -57,8 +65,9 @@
 .links:visited{
   color: rgb( 234, 236, 238 );
 }
+
 /* introduction */
-#introduction{
+.introduction-main-wrapper{
   /* main wrapper grid */
   grid-column: 1 / 13;
   grid-row: auto;
@@ -77,22 +86,325 @@
   font-size: 3em;
   /* display */
   text-align: center;
-  padding-bottom: 1em;
+  padding-bottom: 1.5em;
+  padding-top: 1em;
 }
-.introduction-image{
+.introduction-image-1{
   /* introduction grid */
-  grid-column: 1 / 13;
+  grid-column: 3 / 11;
   grid-row: auto;
-  /* display */
+}
+.introduction-image-1 img{
   display: block;
+  display: none;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 2em;
+  width: 50em;
 }
-.introduction-paragraph{
+.introduction-image-1 img.image-1{
+  display: block;
+}
+.introduction-image-2{
   /* introduction grid */
   grid-column: 3 / 11;
   grid-row: auto;
   /* display */
-  padding-bottom: 1em;
+  display: none;
+}
+.introduction-image-2 img{
+  display: block;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50em;
+}
+.introduction-image-2 img.image-2{
+  display: block;
+}
+.introduction-image-3{
+  /* introduction grid */
+  grid-column: 3 / 11;
+  grid-row: auto;
+  /* display */
+  display: none;
+}
+.introduction-image-3 img{
+  display: block;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50em;
+}
+.introduction-image-3 img.image-3{
+  display: block;
+}
+button{
+  background-color: rgb( 23, 32, 42 );
+  border: none;
+  border-radius: 1em;
+  color: white;
+  font-family: 'Barlow', sans-serif;
+  padding: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-decoration: none;
+}
+button:hover{
+  background-color: rgb( 44, 62, 80 );
+  border: none;
+  border-radius: 1em;
+  color: white;
+  cursor: pointer;
+  font-family: 'Barlow', sans-serif;
+  padding: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-decoration: none;
+}
+.next{
+  float: right;
+  margin: 1em;
+  margin-right: 8em;
+}
+.back{
+  float: left;
+  margin: 1em;
+  margin-left: 8em;
+}
+#introduction{
+  /* introduction grid */
+  grid-column: 3 / 11;
+  grid-row: auto;
+  /* display */
+  padding-top: 1em;
+  position: relative;
+}
+#introduction img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2em;
+  padding-top: 1em;
+  width: 40em;
+}
+
+/* things to do */
+.things-to-do-main-wrapper{
+  /* main wrapper grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* things to do grid */
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto;
+  /* display */
+  padding-top: 1em;
+}
+#things-to-do{
+  /* things to do grid */
+  grid-column: 3 / 11;
+  grid-row: auto;
+}
+.things-to-do-gallery{
+  /* things to do grid */
+  grid-column: 3 / 11;
+  grid-row: auto;
+  /* things to do gallery grid */
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 1em;
+  grid-row-gap: 2em;
+  /* display */
+  padding-top: 1em;
+  padding-left: 0.5em;
+}
+.things-to-do-1{
+  /* things to do gallery grid */
+  grid-column: 1 / 5;
+  grid-row: auto;
+  display: inline-grid;
+}
+.things-to-do-image-1{
+  /* display */
+  position: relative;
+  height: 18em;
+  width: 18em;
+}
+.things-to-do-caption-1{
+  /* display */
+  background-color: rgba( 234, 236, 238, 0.8 );
+  display: none;
+  height: 16em;
+  padding: 1em;
+  position: absolute;
+  width: 16em;
+}
+.things-to-do-2{
+  /* things to do gallery grid */
+  grid-column: 5 / 9;
+  grid-row: auto;
+  display: inline-grid;
+}
+.things-to-do-image-2{
+  /* display */
+  position: relative;
+  height: 18em;
+  width: 18em;
+}
+.things-to-do-caption-2{
+  /* display */
+  background-color: rgba( 234, 236, 238, 0.8 );
+  display: none;
+  height: 16em;
+  padding: 1em;
+  position: absolute;
+  width: 15.9em;
+}
+.things-to-do-3{
+  /* things to do gallery grid */
+  grid-column: 9 / 13;
+  grid-row: auto;
+  display: inline-grid;
+}
+.things-to-do-image-3{
+  /* display */
+  position: relative;
+  height: 18em;
+  width: 18em;
+}
+.things-to-do-caption-3{
+  /* display */
+  background-color: rgba( 234, 236, 238, 0.8 );
+  display: none;
+  height: 16em;
+  padding: 1em;
+  position: absolute;
+  width: 15.9em;
+}
+.things-to-do-4{
+  /* things to do gallery grid */
+  grid-column: 1 / 5;
+  grid-row: auto;
+  display: inline-grid;
+}
+.things-to-do-image-4{
+  /* display */
+  position: relative;
+  height: 18em;
+  width: 18em;
+}
+.things-to-do-caption-4{
+  /* display */
+  background-color: rgba( 234, 236, 238, 0.8 );
+  display: none;
+  height: 16em;
+  padding: 1em;
+  position: absolute;
+  width: 16em;
+}
+.things-to-do-5{
+  /* things to do gallery grid */
+  grid-column: 5 / 9;
+  grid-row: auto;
+  display: inline-grid;
+}
+.things-to-do-image-5{
+  /* display */
+  position: relative;
+  height: 18em;
+  width: 18em;
+}
+.things-to-do-caption-5{
+  /* display */
+  background-color: rgba( 234, 236, 238, 0.8 );
+  display: none;
+  height: 16em;
+  padding: 1em;
+  position: absolute;
+  width: 16em;
+}
+.things-to-do-6{
+  /* things to do gallery grid */
+  grid-column: 9 / 13;
+  grid-row: auto;
+  display: inline-grid;
+}
+.things-to-do-image-6{
+  /* display */
+  position: relative;
+  height: 18em;
+  width: 18em;
+}
+.things-to-do-caption-6{
+  /* display */
+  background-color: rgba( 234, 236, 238, 0.8 );
+  display: none;
+  height: 16em;
+  padding: 1em;
+  position: absolute;
+  width: 16em;
+}
+.things-to-do-7{
+  /* things to do gallery grid */
+  grid-column: 1 / 5;
+  grid-row: auto;
+  display: inline-grid;
+}
+.things-to-do-image-7{
+  /* display */
+  position: relative;
+  height: 18em;
+  width: 18em;
+}
+.things-to-do-caption-7{
+  /* display */
+  background-color: rgba( 234, 236, 238, 0.8 );
+  display: none;
+  height: 16em;
+  padding: 1em;
+  position: absolute;
+  width: 15.9em;
+}
+.things-to-do-8{
+  /* things to do gallery grid */
+  grid-column: 5 / 9;
+  grid-row: auto;
+  display: inline-grid;
+}
+.things-to-do-image-8{
+  /* display */
+  position: relative;
+  height: 18em;
+  width: 18em;
+}
+.things-to-do-caption-8{
+  /* display */
+  background-color: rgba( 234, 236, 238, 0.8 );
+  display: none;
+  height: 16em;
+  padding: 1em;
+  position: absolute;
+  width: 16em;
+}
+.things-to-do-9{
+  /* things to do gallery grid */
+  grid-column: 9 / 13;
+  grid-row: auto;
+  display: inline-grid;
+}
+.things-to-do-image-9{
+  /* display */
+  position: relative;
+  height: 18em;
+  width: 18em;
+}
+.things-to-do-caption-9{
+  /* display */
+  background-color: rgba( 234, 236, 238, 0.8 );
+  display: none;
+  height: 16em;
+  padding: 1em;
+  position: absolute;
+  width: 16em;
 }

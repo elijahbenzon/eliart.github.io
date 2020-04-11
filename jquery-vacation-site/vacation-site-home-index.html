@@ -23,6 +23,7 @@
         <section class="main-header-title">
           ELIJAH'S VACATION GUIDES
         </section>
+        <!-- link navigation -->
         <nav class="main-header-naviagation">
           <a href="#introduction" class="links">INTRODUCTION</a>
           <a href="#things-to-do" class="links">THINGS TO DO</a>
@@ -31,21 +32,225 @@
           <a href="#tips" class="links">TIPS</a>
         </nav>
       </header>
-      <div id="introduction">
+      <!-- main artcile -->
+      <div class="introduction-main-wrapper">
+        <!-- introduction slideshow -->
         <section class="introduction-title">
           BANGKOK, THAILAND
         </section>
-        <section class="introduction-image">
-          <img src="images/intro-image.JPG" width="800"/>
+        <section class="introduction-image-1">
+          <img src="images/intro-1.JPG" class="image-1"/>
+          <button class="step-6 back" type="button" name="back">Back</button>
+          <button class="step-1 next" type="button" name="next">Next</button>
         </section>
-        <section class="introduction-paragraph">
-          <p> Thailand </p>
+        <section class="introduction-image-2">
+          <img src="images/intro-2.JPG" class="image-2"/>
+          <button class="step-5 back" type="button" name="back">Back</button>
+          <button class="step-2 next" type="button" name="next">Next</button>
+        </section>
+        <section class="introduction-image-3">
+          <img src="images/intro-3.JPG" class="image-3"/>
+          <button class="step-4 back" type="button" name="back">Back</button>
+          <button class="step-3 next" type="button" name="next">Next</button>
+        </section>
+        <!-- introduction paragraph -->
+        <section id="introduction">
+          <h1> Introduction </h1>
+          <p> Bangkok is one of the most beautiful and culture-rich cities of the world. Bangkok is the capital of Thailand, a
+          country located in Southeast Asia bordering Myanmar, Laos, Combodia, and Malaysia. Whether the delicious and exotic food,
+          the sparkling temples, or the night life, there are many places to see and activities to do. Without a doubt,
+          this city remains of my favorite cities I have traveled to — here are some recommendations and some advice
+          if you would like to travel to Bangkok! </p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/LocationThailand.svg/1280px-LocationThailand.svg.png"/>
+        </section>
+      </div>
+      <div class="things-to-do-main-wrapper">
+        <!-- things to do paragraph -->
+        <section id="things-to-do">
+          <h1> Things To Do </h1>
+          <p> There are countless activites to do and places to see in Bangkok. Want to chill and have a cup of coffee? Check out
+          the city's cafes! Interested in Thailand's history and culture? Be sure to go to all the museums and temples! Enjoy
+          shopping and outdoor music? Look for the many shopping malls and outdoor markets! There is something for
+          everyone. Here are my favorite places to visit: </p>
+        </section>
+        <!-- things to do gallery -->
+        <section class="things-to-do-gallery">
+          <div class="things-to-do-1">
+            <section class="things-to-do-image-1">
+              <img src="images/things-to-do-1.JPG"/>
+            </section>
+            <section class="things-to-do-caption-1">
+              <b> Temple of the Emerald Buddha </b><br><br>
+              Known as the Wat Phra Si Rattana Satsadaram, this temple
+            </section>
+          </div>
+          <div class="things-to-do-2">
+            <section class="things-to-do-image-2">
+              <img src="images/things-to-do-2.JPG"/>
+            </section>
+            <section class="things-to-do-caption-2">
+              <b> ICONSIAM Shopping Mall </b><br><br>
+              Text
+            </section>
+          </div>
+          <div class="things-to-do-3">
+            <section class="things-to-do-image-3">
+              <img src="images/things-to-do-3.JPG"/>
+            </section>
+            <section class="things-to-do-caption-3">
+              <b> Temple of the Reclining Buddha </b><br><br>
+              Text
+            </section>
+          </div>
+          <div class="things-to-do-4">
+            <section class="things-to-do-image-4">
+              <img src="images/things-to-do-4.JPG"/>
+            </section>
+            <section class="things-to-do-caption-4">
+              <b> The Grand Palace </b><br><br>
+              Text
+            </section>
+          </div>
+          <div class="things-to-do-5">
+            <section class="things-to-do-image-5">
+              <img src="images/things-to-do-5.JPG"/>
+            </section>
+            <section class="things-to-do-caption-5">
+              <b> Khlong Ton Sai District </b><br><br>
+              Text
+            </section>
+          </div>
+          <div class="things-to-do-6">
+            <section class="things-to-do-image-6">
+              <img src="images/things-to-do-6.JPG"/>
+            </section>
+            <section class="things-to-do-caption-6">
+              <b> Siam Square </b><br><br>
+              Text
+            </section>
+          </div>
+          <div class="things-to-do-7">
+            <section class="things-to-do-image-7">
+              <img src="images/things-to-do-7.JPG"/>
+            </section>
+            <section class="things-to-do-caption-7">
+              <b> Jim Thompson House Museum </b><br><br>
+              Text
+            </section>
+          </div>
+          <div class="things-to-do-8">
+            <section class="things-to-do-image-8">
+              <img src="images/things-to-do-8.JPG"/>
+            </section>
+            <section class="things-to-do-caption-8">
+              <b> Siam Paragon </b><br><br>
+              Text
+            </section>
+          </div>
+          <div class="things-to-do-9">
+            <section class="things-to-do-image-9">
+              <img src="images/things-to-do-9.JPG"/>
+            </section>
+            <section class="things-to-do-caption-9">
+              <b> Pathum Wan District </b><br><br>
+              Text
+            </section>
+          </div>
         </section>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-
+    <script type="text/javascript">
+      // introduction slideshow
+      $(document).ready(function() {
+        // Step 1
+        $(".step-1").click(function(){
+          $(".introduction-image-1").hide(500);
+          $(".introduction-image-2").show(500);
+        });
+        // Step 2
+        $(".step-2").click(function() {
+          $(".introduction-image-2").hide(500);
+          $(".introduction-image-3").show(500);
+        });
+        // Step 3
+        $(".step-3").click(function() {
+          $(".introduction-image-3").hide(500);
+          $(".introduction-image-1").show(500);
+        });
+        // Step 4
+        $(".step-4").click(function() {
+          $(".introduction-image-3").hide(500);
+          $(".introduction-image-2").show(500);
+        });
+        // Step 5
+        $(".step-5").click(function() {
+          $(".introduction-image-2").hide(500);
+          $(".introduction-image-1").show(500);
+        });
+        // Step 6
+        $(".step-6").click(function() {
+          $(".introduction-image-1").hide(500);
+          $(".introduction-image-3").show(500);
+        });
+      });
+      // gallery
+      $(document).ready(function() {
+        $(".things-to-do-image-1").mouseenter(function() {
+          $(".things-to-do-caption-1").fadeIn(300);
+        });
+        $(".things-to-do-caption-1").mouseleave(function() {
+          $(".things-to-do-caption-1").fadeOut(300);
+        });
+        $(".things-to-do-image-2").mouseenter(function() {
+          $(".things-to-do-caption-2").fadeIn(300);
+        });
+        $(".things-to-do-caption-2").mouseleave(function() {
+          $(".things-to-do-caption-2").fadeOut(300);
+        });
+        $(".things-to-do-image-3").mouseenter(function() {
+          $(".things-to-do-caption-3").fadeIn(300);
+        });
+        $(".things-to-do-caption-3").mouseleave(function() {
+          $(".things-to-do-caption-3").fadeOut(300);
+        });
+        $(".things-to-do-image-4").mouseenter(function() {
+          $(".things-to-do-caption-4").fadeIn(300);
+        });
+        $(".things-to-do-caption-4").mouseleave(function() {
+          $(".things-to-do-caption-4").fadeOut(300);
+        });
+        $(".things-to-do-image-5").mouseenter(function() {
+          $(".things-to-do-caption-5").fadeIn(300);
+        });
+        $(".things-to-do-caption-5").mouseleave(function() {
+          $(".things-to-do-caption-5").fadeOut(300);
+        });
+        $(".things-to-do-image-6").mouseenter(function() {
+          $(".things-to-do-caption-6").fadeIn(300);
+        });
+        $(".things-to-do-caption-6").mouseleave(function() {
+          $(".things-to-do-caption-6").fadeOut(300);
+        });
+        $(".things-to-do-image-7").mouseenter(function() {
+          $(".things-to-do-caption-7").fadeIn(300);
+        });
+        $(".things-to-do-caption-7").mouseleave(function() {
+          $(".things-to-do-caption-7").fadeOut(300);
+        });
+        $(".things-to-do-image-8").mouseenter(function() {
+          $(".things-to-do-caption-8").fadeIn(300);
+        });
+        $(".things-to-do-caption-8").mouseleave(function() {
+          $(".things-to-do-caption-8").fadeOut(300);
+        });
+        $(".things-to-do-image-9").mouseenter(function() {
+          $(".things-to-do-caption-9").fadeIn(300);
+        });
+        $(".things-to-do-caption-9").mouseleave(function() {
+          $(".things-to-do-caption-9").fadeOut(300);
+        });
+      });
     </script>
   </body>
 </html>
