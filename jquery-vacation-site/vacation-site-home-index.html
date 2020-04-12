@@ -19,15 +19,17 @@
   <body>
     <div class="main-wrapper">
       <!-- the header with navigation -->
-      <header class="main-header-wrapper">
-        <section class="main-header-title">
-          ELIJAH'S VACATION GUIDES
-        </section>
-        <!-- link navigation -->
-        <nav id="home">
-          <a href="#introduction" class="links">INTRODUCTION</a>
-          <a href="#things-to-do" class="links">THINGS TO DO</a>
-          <a href="#tips" class="links">TIPS</a>
+      <header id="main-header">
+        <!-- hamburger link -->
+        <nav class="site-nav">
+          <div class="menu-toggle">
+            <div class="hamburger"></div>
+          </div>
+          <ul class="open desktop">
+            <li><a href="#introduction">INTRODUCTION</a></li>
+            <li><a href="#things-to-do">THINGS TO DO</a></li>
+            <li><a href="#tips">TIPS</a></li>
+          </ul>
         </nav>
       </header>
       <!-- main artcile -->
@@ -57,8 +59,8 @@
           <p> Bangkok is one of the most beautiful and culture-rich cities of the world. Bangkok is the capital of Thailand, a
           country located in Southeast Asia bordering Myanmar, Laos, Combodia, and Malaysia. Whether the delicious and exotic food,
           the sparkling temples, or the night life, there are many places to see and activities to do. Without a doubt,
-          this city remains of my favorite cities I have traveled to — here are some recommendations and some advice
-          if you would like to travel to Bangkok! </p>
+          this city remains of my favorite cities I have traveled to, and I have many photographs to prove it — here are
+          some recommendations and some advice if you would like to travel to Bangkok! </p>
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/LocationThailand.svg/1280px-LocationThailand.svg.png"/>
         </section>
       </div>
@@ -175,10 +177,10 @@
       <div class="tips-main-wrapper">
         <section id="tips">
           <h1> Tips </h1>
-          <p> With some idea on some places to visit in Bangkok, you will definitely need some advice on how maximize your
+          <p> With somewhat an idea on some places to visit in Bangkok, you will definitely need some advice on how maximize your
           experience in this wonderful city. Here are some tips for you to consider when traveling: </p>
         </section>
-        <section class="tips-question-1">
+        <section class="tips-questions">
           <div>
             <p class="question-1"><b> What is the best way to get around Bangkok? </b></p>
             <button class="button-1" type="button" name="answer">Answer</button>
@@ -196,7 +198,7 @@
               <ul>
                 <li> Akara Hotel </li>
                 <li> Bangkok Oasis Hotel </li>
-                <li> Chatrium Hotel Riverside </li>
+                <li> Chatrium Hotel Residence </li>
                 <li> Shangri-La Hotel </li>
                 <li> SilQ Boutique Hotel </li>
               </ul>
@@ -209,7 +211,7 @@
             <button class="button-3" type="button" name="answer">Answer</button>
             <section class="answer-3">
               In most temples, you must cover your shoulders and legs, so make sure you are not wearing shorts or short skirts
-              when you plan on visiting a temple. Additionally, you may be asked to take off your shoes when you enter a the temples
+              when you plan on visiting a temple. Additionally, you may be asked to take off your shoes when you enter the temples
               containing buddha statues. Be sure to research before visiting a temple.
             </section>
           </div>
@@ -217,12 +219,34 @@
       </div>
       <footer id="footer">
         <section>
-        <a href="#home" class="links">Back To Top</a>
+        <a href="#main-header" class="links">Back To Top</a>
         </section>
       </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
     <script type="text/javascript">
+      // hamburger navigation
+      $('.menu-toggle').click(function() {
+        $('ul').toggleClass('opening');
+        $(this).toggleClass('open');
+      })
+      // sticky navigation bar
+      $(document).ready(function() {
+        var stickyNavTop = $(".site-nav").offset().top;
+        var stickyNav = function(){
+          var scrollTop = $(window).scrollTop();
+          if (scrollTop > stickyNavTop) {
+            $(".site-nav").addClass("sticky");
+          } else {
+            $(".site-nav").removeClass("sticky");
+          }
+        };
+        stickyNav();
+        $(window).scroll(function() {
+          stickyNav();
+        });
+      });
       // introduction slideshow
       $(document).ready(function() {
         // Step 1

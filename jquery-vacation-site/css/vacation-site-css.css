@@ -16,7 +16,7 @@ img {
 }
 
 /* header */
-.main-header-wrapper{
+#main-header{
   /* main wrapper grid */
   grid-column: 1 / 13;
   grid-row: auto;
@@ -25,7 +25,6 @@ img {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: auto;
   /* styling */
-  background-color: rgb( 23, 32, 42 );
   border-radius: 0.3em;
   color: rgb( 234, 236, 238 );
   font-weight: 600;
@@ -36,37 +35,95 @@ img {
   padding-right: 2em;
   padding-top: 1em;
 }
-.main-header-title{
-  /* main wrapper grid */
-  grid-column: 2 / 12;
-  grid-row: auto;
-  /* display */
-  padding-left: 8em;
-  padding-right: 39em;
+
+/* sticky navigation bar */
+.sticky{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
 }
-#home{
-  /* main wrapper grid */
-  grid-column: 2 / 12;
-  grid-row: auto;
-}
-.links{
-  text-decoration: none;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-.links:hover{
-  background-color: rgb( 44, 62, 80 );
-  border-radius: 0.5em;
-  cursor: pointer;
-}
-.links:link{
-  color: rgb( 234, 236, 238 );
-}
-.links:visited{
-  color: rgb( 234, 236, 238 );
+.sticky + .content{
+  padding-top: 60px;
 }
 
-/* introduction */
+/* hamburger navigation bar */
+nav{
+  margin: 0;
+  padding: 0;
+}
+nav ul{
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+nav ul.opening{
+  display: block;
+  height: 30px;
+}
+nav li{
+  border-bottom: 1em solid rgb( 44, 62, 80 );
+}
+nav a {
+  color: rgb( 234, 236, 238 );
+  background: rgb( 44, 62, 80 );
+  display: block;
+  padding: 1.5em 4em 1.5em 3em;
+  text-decoration: none;
+}
+nav a:hover, nav a:focus {
+  background: rgb( 44, 62, 80 );
+}
+.site-nav--icon {
+  font-size: 1.4em;
+  margin-right: 1em;
+  width:1.1em;
+  text-align: right;
+  color: rgba( 234, 236, 238 .4);
+}
+.menu-toggle {
+  position: absolute;
+  padding: 0.8em;
+  top: 1em;
+  right: .5em;
+  cursor: pointer;
+  }
+.hamburger, .hamburger::before, .hamburger::after {
+  content:'';
+  display: block;
+  background: rgb( 44, 62, 80 );
+  height:3px;
+  width: 2em;
+  border-radius: 3px;
+  -webkit-transition:all ease-in-out350ms;
+  transition:all ease-in-out350ms;
+}
+.hamburger::before {
+  -webkit-transform: translateY(-7px);
+  transform: translateY(-7px);
+}
+.hamburger::after {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+}
+.open .hamburger {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.open .hamburger::before {
+  display:none;
+}
+.open .hamburger::after {
+  -webkit-transform: translateY(-1px) rotate(-90deg);
+  transform: translateY(-1px) rotate(-90deg);
+}
+
+/* introduction slideshow*/
 .introduction-main-wrapper{
   /* main wrapper grid */
   grid-column: 1 / 13;
@@ -82,8 +139,6 @@ img {
   /* introduction grid */
   grid-column: 1 / 13;
   grid-row: auto;
-  /* font */
-  font-size: 3em;
   /* display */
   text-align: center;
   padding-bottom: 1.5em;
@@ -91,7 +146,6 @@ img {
 }
 .introduction-image-1{
   /* introduction grid */
-  grid-column: 3 / 11;
   grid-row: auto;
 }
 .introduction-image-1 img{
@@ -99,14 +153,12 @@ img {
   display: none;
   margin-left: auto;
   margin-right: auto;
-  width: 50em;
 }
 .introduction-image-1 img.image-1{
   display: block;
 }
 .introduction-image-2{
   /* introduction grid */
-  grid-column: 3 / 11;
   grid-row: auto;
   /* display */
   display: none;
@@ -116,14 +168,12 @@ img {
   display: none;
   margin-left: auto;
   margin-right: auto;
-  width: 50em;
 }
 .introduction-image-2 img.image-2{
   display: block;
 }
 .introduction-image-3{
   /* introduction grid */
-  grid-column: 3 / 11;
   grid-row: auto;
   /* display */
   display: none;
@@ -133,7 +183,6 @@ img {
   display: none;
   margin-left: auto;
   margin-right: auto;
-  width: 50em;
 }
 .introduction-image-3 img.image-3{
   display: block;
@@ -163,14 +212,12 @@ button:hover{
 }
 .next{
   float: right;
-  margin: 1em;
-  margin-right: 8em;
 }
 .back{
   float: left;
-  margin: 1em;
-  margin-left: 8em;
 }
+
+/* introduction */
 #introduction{
   /* introduction grid */
   grid-column: 3 / 11;
@@ -185,7 +232,6 @@ button:hover{
   margin-right: auto;
   padding-bottom: 2em;
   padding-top: 1em;
-  width: 40em;
 }
 
 /* things to do */
@@ -200,213 +246,149 @@ button:hover{
   /* display */
   padding-top: 1em;
 }
-#things-to-do{
-  /* things to do grid */
-  grid-column: 3 / 11;
-  grid-row: auto;
-}
 .things-to-do-gallery{
   /* things to do grid */
-  grid-column: 3 / 11;
   grid-row: auto;
   /* things to do gallery grid */
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: auto;
-  grid-gap: 1em;
-  grid-row-gap: 2em;
   /* display */
-  padding-top: 1em;
-  padding-left: 0.5em;
 }
 .things-to-do-1{
   /* things to do gallery grid */
-  grid-column: 1 / 5;
   grid-row: auto;
   display: inline-grid;
 }
 .things-to-do-image-1{
   /* display */
   position: relative;
-  height: 18em;
-  width: 18em;
 }
 .things-to-do-caption-1{
   /* display */
   background-color: rgba( 234, 236, 238, 0.8 );
   display: none;
-  height: 16em;
-  padding: 1em;
   position: absolute;
-  width: 16em;
 }
 .things-to-do-2{
   /* things to do gallery grid */
-  grid-column: 5 / 9;
   grid-row: auto;
   display: inline-grid;
 }
 .things-to-do-image-2{
   /* display */
   position: relative;
-  height: 18em;
-  width: 18em;
 }
 .things-to-do-caption-2{
   /* display */
   background-color: rgba( 234, 236, 238, 0.8 );
   display: none;
-  height: 16em;
-  padding: 1em;
   position: absolute;
-  width: 15.9em;
 }
 .things-to-do-3{
   /* things to do gallery grid */
-  grid-column: 9 / 13;
   grid-row: auto;
   display: inline-grid;
 }
 .things-to-do-image-3{
   /* display */
   position: relative;
-  height: 18em;
-  width: 18em;
 }
 .things-to-do-caption-3{
   /* display */
   background-color: rgba( 234, 236, 238, 0.8 );
   display: none;
-  height: 16em;
-  padding: 1em;
   position: absolute;
-  width: 15.9em;
 }
 .things-to-do-4{
   /* things to do gallery grid */
-  grid-column: 1 / 5;
   grid-row: auto;
   display: inline-grid;
 }
 .things-to-do-image-4{
   /* display */
   position: relative;
-  height: 18em;
-  width: 18em;
 }
 .things-to-do-caption-4{
   /* display */
   background-color: rgba( 234, 236, 238, 0.8 );
   display: none;
-  height: 16em;
-  padding: 1em;
   position: absolute;
-  width: 16em;
 }
 .things-to-do-5{
   /* things to do gallery grid */
-  grid-column: 5 / 9;
   grid-row: auto;
   display: inline-grid;
 }
 .things-to-do-image-5{
   /* display */
   position: relative;
-  height: 18em;
-  width: 18em;
 }
 .things-to-do-caption-5{
   /* display */
   background-color: rgba( 234, 236, 238, 0.8 );
   display: none;
-  height: 16em;
-  padding: 1em;
   position: absolute;
-  width: 16em;
 }
 .things-to-do-6{
   /* things to do gallery grid */
-  grid-column: 9 / 13;
   grid-row: auto;
   display: inline-grid;
 }
 .things-to-do-image-6{
   /* display */
   position: relative;
-  height: 18em;
-  width: 18em;
 }
 .things-to-do-caption-6{
   /* display */
   background-color: rgba( 234, 236, 238, 0.8 );
   display: none;
-  height: 16em;
-  padding: 1em;
   position: absolute;
-  width: 16em;
 }
 .things-to-do-7{
   /* things to do gallery grid */
-  grid-column: 1 / 5;
   grid-row: auto;
   display: inline-grid;
 }
 .things-to-do-image-7{
   /* display */
   position: relative;
-  height: 18em;
-  width: 18em;
 }
 .things-to-do-caption-7{
   /* display */
   background-color: rgba( 234, 236, 238, 0.8 );
   display: none;
-  height: 16em;
-  padding: 1em;
   position: absolute;
-  width: 15.9em;
 }
 .things-to-do-8{
   /* things to do gallery grid */
-  grid-column: 5 / 9;
   grid-row: auto;
   display: inline-grid;
 }
 .things-to-do-image-8{
   /* display */
   position: relative;
-  height: 18em;
-  width: 18em;
 }
 .things-to-do-caption-8{
   /* display */
   background-color: rgba( 234, 236, 238, 0.8 );
   display: none;
-  height: 16em;
-  padding: 1em;
   position: absolute;
-  width: 16em;
 }
 .things-to-do-9{
   /* things to do gallery grid */
-  grid-column: 9 / 13;
   grid-row: auto;
   display: inline-grid;
 }
 .things-to-do-image-9{
   /* display */
   position: relative;
-  height: 18em;
-  width: 18em;
 }
 .things-to-do-caption-9{
   /* display */
   background-color: rgba( 234, 236, 238, 0.8 );
   display: none;
-  height: 16em;
-  padding: 1em;
   position: absolute;
-  width: 16em;
 }
 
 /* tips */
@@ -421,21 +403,9 @@ button:hover{
   /* display */
   padding-top: 4em;
 }
-#tips{
+.tips-questions{
   /* things to do grid */
-  grid-column: 3 / 11;
   grid-row: auto;
-}
-.picked-question{
-  font-size: 1.25em;
-}
-.tips-question-1{
-  /* things to do grid */
-  grid-column: 3 / 11;
-  grid-row: auto;
-}
-.question-1{
-  padding-right: 1em;
 }
 .answer-1{
   display: none;
@@ -443,22 +413,14 @@ button:hover{
 }
 .tips-question-2{
   /* things to do grid */
-  grid-column: 3 / 11;
   grid-row: auto;
-}
-.question-2{
-  padding-right: 1em;
 }
 .answer-2{
   display: none;
 }
 .tips-question-3{
   /* things to do grid */
-  grid-column: 3 / 11;
   grid-row: auto;
-}
-.question-3{
-  padding-right: 1em;
 }
 .answer-3{
   display: none;
@@ -477,4 +439,1009 @@ button:hover{
   border-radius: 0.5em;
   padding: 1em;
   margin-top: 5em;
+}
+.links{
+  text-decoration: none;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.links:hover{
+  background-color: rgb( 44, 62, 80 );
+  cursor: pointer;
+}
+.links:link{
+  color: rgb( 234, 236, 238 );
+}
+.links:visited{
+  color: rgb( 234, 236, 238 );
+}
+
+/* media queries */
+@media only screen and (min-width: 45em){
+  /* introduction */
+  .introduction-title{
+    /* font */
+    font-size: 2.5em;
+  }
+  .introduction-image-1{
+    /* introduction grid */
+    grid-column: 1 / 13;
+  }
+  .introduction-image-1 img{
+    width: 35em;
+  }
+  .introduction-image-2{
+    /* introduction grid */
+    grid-column: 1 / 13;
+  }
+  .introduction-image-2 img{
+    width: 35em;
+  }
+  .introduction-image-3{
+    /* introduction grid */
+    grid-column: 1 / 13;
+  }
+  .introduction-image-3 img{
+    width: 35em;
+  }
+  .next{
+    margin: 1em;
+    margin-right: 25em;
+  }
+  .back{
+    margin: 1em;
+    margin-left: 25em;
+  }
+  #introduction{
+    grid-column: 2 / 12;
+  }
+  #introduction img{
+    width: 40em;
+  }
+
+  /* things to do */
+  #things-to-do{
+    /* things to do grid */
+    grid-column: 2 / 12;
+    grid-row: auto;
+    margin-right: -1.25em;
+  }
+  .things-to-do-gallery{
+    /* things to do grid */
+    grid-column: 2 / 12;
+    /* things to do gallery grid */
+    grid-gap: 0.5em;
+    grid-row-gap: 2em;
+    /* display */
+    padding-top: 1em;
+    padding-left: 1.15em;
+  }
+  .things-to-do-1{
+    /* things to do gallery grid */
+    grid-column: 1 / 7;
+  }
+  .things-to-do-image-1{
+    /* display */
+    height: 17.5em;
+    width: 17.5em;
+  }
+  .things-to-do-caption-1{
+    /* display */
+    height: 15.5em;
+    line-height: 1.25em;
+    padding: 1em;
+    width: 15.5em;
+  }
+  .things-to-do-2{
+    /* things to do gallery grid */
+    grid-column: 7 / 13;
+  }
+  .things-to-do-image-2{
+    /* display */
+    height: 17.5em;
+    width: 17.5em;
+  }
+  .things-to-do-caption-2{
+    /* display */
+    height: 15.5em;
+    line-height: 1.25em;
+    padding: 1em;
+    width: 15.4em;
+  }
+  .things-to-do-3{
+    /* things to do gallery grid */
+    grid-column: 1 / 7;
+  }
+  .things-to-do-image-3{
+    /* display */
+    height: 17.5em;
+    width: 17.5em;
+  }
+  .things-to-do-caption-3{
+    /* display */
+    height: 15.5em;
+    line-height: 1.25em;
+    padding: 1em;
+    width: 15.4em;
+  }
+  .things-to-do-4{
+    /* things to do gallery grid */
+    grid-column: 7 / 13;
+  }
+  .things-to-do-image-4{
+    /* display */
+    height: 17.5em;
+    width: 17.5em;
+  }
+  .things-to-do-caption-4{
+    /* display */
+    height: 15.5em;
+    line-height: 1.25em;
+    padding: 1em;
+    position: absolute;
+    width: 15.5em;
+  }
+  .things-to-do-5{
+    /* things to do gallery grid */
+    grid-column: 1 / 7;
+  }
+  .things-to-do-image-5{
+    /* display */
+    height: 17.5em;
+    width: 17.5em;
+  }
+  .things-to-do-caption-5{
+    /* display */
+    height: 15.5em;
+    line-height: 1.25em;
+    padding: 1em;
+    width: 15.5em;
+  }
+  .things-to-do-6{
+    /* things to do gallery grid */
+    grid-column: 7 / 13;
+  }
+  .things-to-do-image-6{
+    /* display */
+    height: 17.5em;
+    width: 17.5em;
+  }
+  .things-to-do-caption-6{
+    /* display */
+    height: 15.5em;
+    line-height: 1.25em;
+    padding: 1em;
+    width: 15.5em;
+  }
+  .things-to-do-7{
+    /* things to do gallery grid */
+    grid-column: 1 / 7;
+  }
+  .things-to-do-image-7{
+    /* display */
+    height: 17.5em;
+    width: 17.5em;
+  }
+  .things-to-do-caption-7{
+    /* display */
+    height: 15.5em;
+    line-height: 1.25em;
+    padding: 1em;
+    width: 15.4em;
+  }
+  .things-to-do-8{
+    /* things to do gallery grid */
+    grid-column: 7 / 13;
+  }
+  .things-to-do-image-8{
+    /* display */
+    height: 17.5em;
+    width: 17.5em;
+  }
+  .things-to-do-caption-8{
+    /* display */
+    height: 15.5em;
+    line-height: 1.25em;
+    padding: 1em;
+    position: absolute;
+    width: 15.5em;
+  }
+  .things-to-do-9{
+    /* things to do gallery grid */
+    grid-column: 1 / 7;
+  }
+  .things-to-do-image-9{
+    /* display */
+    height: 17.5em;
+    width: 17.5em;
+  }
+  .things-to-do-caption-9{
+    /* display */
+    height: 15.5em;
+    line-height: 1.25em;
+    padding: 1em;
+    position: absolute;
+    width: 15.5em;
+  }
+
+  /* tips */
+  #tips{
+    /* things to do grid */
+    grid-column: 2 / 12;
+    grid-row: auto;
+  }
+  .picked-question{
+    font-size: 1.5em;
+  }
+  .tips-questions{
+    /* things to do grid */
+    grid-column: 2 / 12;
+  }
+  .tips-question-1{
+    /* things to do grid */
+    grid-column: 2 / 12;
+  }
+  .tips-question-2{
+    /* things to do grid */
+    grid-column: 2 / 12;
+  }
+  .tips-question-3{
+    /* things to do grid */
+    grid-column: 2 / 12;
+  }
+}
+@media (min-width:48.75em) {
+  #main-header{
+    background-color: rgb( 23, 32, 42 );
+  }
+
+  .menu-toggle{
+    display:none;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  nav li {
+    flex: 1 1 auto;
+    border:none;
+  }
+  nav li a {
+    padding: 0.3em 0.1em 0.3em 0.1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin:0;
+    border:none;
+    background-color: rgb( 23, 32, 42 );
+  }
+  nav a:hover, nav a:focus{
+    background-color: rgba( 23, 32, 42 .10);
+  }
+  .logo {
+    flex:0 0 200px;
+    margin:0;
+    padding-left:20px;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align:center;
+    background-color: rgb( 23, 32, 42 );
+  }
+} /* hamburger link media query */
+@media only screen and (min-width: 50em){
+  .things-to-do-gallery{
+    padding-left: 3em;
+  }
+}
+@media only screen and (min-width: 62em){
+  /* header */
+  #main-header{
+    background-color: rgb( 23, 32, 42 );
+  }
+
+  /* introduction */
+  .introduction-title{
+    /* font */
+    font-size: 3em;
+  }
+  .introduction-image-1{
+    /* introduction grid */
+    grid-column: 3 / 11;
+  }
+  .introduction-image-1 img{
+    width: 50em;
+  }
+  .introduction-image-2{
+    /* introduction grid */
+    grid-column: 3 / 11;
+  }
+  .introduction-image-2 img{
+    width: 50em;
+  }
+  .introduction-image-3{
+    /* introduction grid */
+    grid-column: 3 / 11;
+  }
+  .introduction-image-3 img{
+    width: 50em;
+  }
+  .next{
+    margin: 1em;
+    margin-right: 8em;
+  }
+  .back{
+    margin: 1em;
+    margin-left: 8em;
+  }
+  #introduction{
+    grid-column: 3 / 11;
+  }
+  #introduction img{
+    width: 40em;
+  }
+
+  /* things to do */
+  #things-to-do{
+    /* things to do grid */
+    grid-column: 3 / 11;
+    grid-row: auto;
+    margin-right: -1.75em;
+  }
+  .things-to-do-gallery{
+    /* things to do grid */
+    grid-column: 3 / 11;
+    /* things to do gallery grid */
+    grid-gap: 0.5em;
+    grid-row-gap: 2em;
+    /* display */
+    padding-top: 1em;
+    padding-left: 1.5em;
+  }
+  .things-to-do-1{
+    /* things to do gallery grid */
+    grid-column: 1 / 7;
+  }
+  .things-to-do-image-1{
+    /* display */
+    height: 19em;
+    width: 19em;
+  }
+  .things-to-do-caption-1{
+    /* display */
+    height: 17em;
+    line-height: 1.5em;
+    padding: 1em;
+    width: 17em;
+  }
+  .things-to-do-2{
+    /* things to do gallery grid */
+    grid-column: 7 / 13;
+  }
+  .things-to-do-image-2{
+    /* display */
+    height: 19em;
+    width: 19em;
+  }
+  .things-to-do-caption-2{
+    /* display */
+    height: 17em;
+    line-height: 1.5em;
+    padding: 1em;
+    width: 16.9em;
+  }
+  .things-to-do-3{
+    /* things to do gallery grid */
+    grid-column: 1 / 7;
+  }
+  .things-to-do-image-3{
+    /* display */
+    height: 19em;
+    width: 19em;
+  }
+  .things-to-do-caption-3{
+    /* display */
+    height: 17em;
+    line-height: 1.5em;
+    padding: 1em;
+    width: 16.9em;
+  }
+  .things-to-do-4{
+    /* things to do gallery grid */
+    grid-column: 7 / 13;
+  }
+  .things-to-do-image-4{
+    /* display */
+    height: 19em;
+    width: 19em;
+  }
+  .things-to-do-caption-4{
+    /* display */
+    height: 17em;
+    line-height: 1.5em;
+    padding: 1em;
+    position: absolute;
+    width: 17em;
+  }
+  .things-to-do-5{
+    /* things to do gallery grid */
+    grid-column: 1 / 7;
+  }
+  .things-to-do-image-5{
+    /* display */
+    height: 19em;
+    width: 19em;
+  }
+  .things-to-do-caption-5{
+    /* display */
+    height: 17em;
+    line-height: 1.5em;
+    padding: 1em;
+    width: 17em;
+  }
+  .things-to-do-6{
+    /* things to do gallery grid */
+    grid-column: 7 / 13;
+  }
+  .things-to-do-image-6{
+    /* display */
+    height: 19em;
+    width: 19em;
+  }
+  .things-to-do-caption-6{
+    /* display */
+    height: 17em;
+    line-height: 1.5em;
+    padding: 1em;
+    width: 17em;
+  }
+  .things-to-do-7{
+    /* things to do gallery grid */
+    grid-column: 1 / 7;
+  }
+  .things-to-do-image-7{
+    /* display */
+    height: 19em;
+    width: 19em;
+  }
+  .things-to-do-caption-7{
+    /* display */
+    height: 17em;
+    line-height: 1.5em;
+    padding: 1em;
+    width: 16.9em;
+  }
+  .things-to-do-8{
+    /* things to do gallery grid */
+    grid-column: 7 / 13;
+  }
+  .things-to-do-image-8{
+    /* display */
+    height: 19em;
+    width: 19em;
+  }
+  .things-to-do-caption-8{
+    /* display */
+    height: 17em;
+    line-height: 1.5em;
+    padding: 1em;
+    position: absolute;
+    width: 17em;
+  }
+  .things-to-do-9{
+    /* things to do gallery grid */
+    grid-column: 1 / 7;
+  }
+  .things-to-do-image-9{
+    /* display */
+    height: 19em;
+    width: 19em;
+  }
+  .things-to-do-caption-9{
+    /* display */
+    height: 17em;
+    line-height: 1.5em;
+    padding: 1em;
+    position: absolute;
+    width: 17em;
+  }
+
+  /* tips */
+  #tips{
+    /* things to do grid */
+    grid-column: 3 / 11;
+    grid-row: auto;
+  }
+  .picked-question{
+    font-size: 1.25em;
+  }
+  .tips-questions{
+    /* things to do grid */
+    grid-column: 3 / 11;
+  }
+  .tips-question-1{
+    /* things to do grid */
+    grid-column: 3 / 11;
+  }
+  .tips-question-2{
+    /* things to do grid */
+    grid-column: 3 / 11;
+  }
+  .tips-question-3{
+    /* things to do grid */
+    grid-column: 3 / 11;
+  }
+}
+@media only screen and (min-width: 75em){
+  /* header */
+  #main-header{
+    background-color: rgb( 23, 32, 42 );
+  }
+
+  /* introduction */
+  .introduction-title{
+    /* font */
+    font-size: 3em;
+  }
+  .introduction-image-1{
+    /* introduction grid */
+    grid-column: 3 / 11;
+  }
+  .introduction-image-1 img{
+    width: 50em;
+  }
+  .introduction-image-2{
+    /* introduction grid */
+    grid-column: 3 / 11;
+  }
+  .introduction-image-2 img{
+    width: 50em;
+  }
+  .introduction-image-3{
+    /* introduction grid */
+    grid-column: 3 / 11;
+  }
+  .introduction-image-3 img{
+    width: 50em;
+  }
+  .next{
+    margin: 1em;
+    margin-right: 8em;
+  }
+  .back{
+    margin: 1em;
+    margin-left: 8em;
+  }
+  #introduction{
+    grid-column: 3 / 11;
+  }
+  #introduction img{
+    width: 40em;
+  }
+
+  /* things to do */
+  #things-to-do{
+    /* things to do grid */
+    grid-column: 3 / 11;
+    grid-row: auto;
+  }
+  .things-to-do-gallery{
+    /* things to do grid */
+    grid-column: 3 / 11;
+    /* things to do gallery grid */
+    grid-gap: 1.5em;
+    grid-row-gap: 0.8em;
+    /* display */
+    padding-top: 1em;
+    padding-left: 0.5em;
+  }
+  .things-to-do-1{
+    /* things to do gallery grid */
+    grid-column: 1 / 5;
+  }
+  .things-to-do-image-1{
+    /* display */
+    height: 16em;
+    width: 16em;
+  }
+  .things-to-do-caption-1{
+    /* display */
+    height: 14em;
+    line-height: 1.10em;
+    padding: 1em;
+    width: 14em;
+  }
+  .things-to-do-2{
+    /* things to do gallery grid */
+    grid-column: 5 / 9;
+  }
+  .things-to-do-image-2{
+    /* display */
+    height: 16em;
+    width: 16em;
+  }
+  .things-to-do-caption-2{
+    /* display */
+    height: 14em;
+    line-height: 1.10em;
+    padding: 1em;
+    width: 13.9em;
+  }
+  .things-to-do-3{
+    /* things to do gallery grid */
+    grid-column: 9 / 13;
+  }
+  .things-to-do-image-3{
+    /* display */
+    height: 16em;
+    width: 16em;
+  }
+  .things-to-do-caption-3{
+    /* display */
+    height: 14em;
+    line-height: 1.10em;
+    padding: 1em;
+    width: 13.9em;
+  }
+  .things-to-do-4{
+    /* things to do gallery grid */
+    grid-column: 1 / 5;
+  }
+  .things-to-do-image-4{
+    /* display */
+    height: 16em;
+    width: 16em;
+  }
+  .things-to-do-caption-4{
+    /* display */
+    height: 14em;
+    line-height: 1.1em;
+    padding: 1em;
+    position: absolute;
+    width: 14em;
+  }
+  .things-to-do-5{
+    /* things to do gallery grid */
+    grid-column: 5 / 9;
+  }
+  .things-to-do-image-5{
+    /* display */
+    height: 16em;
+    width: 16em;
+  }
+  .things-to-do-caption-5{
+    /* display */
+    height: 14em;
+    line-height: 1.1em;
+    padding: 1em;
+    width: 14em;
+  }
+  .things-to-do-6{
+    /* things to do gallery grid */
+    grid-column: 9 / 13;
+  }
+  .things-to-do-image-6{
+    /* display */
+    height: 16em;
+    width: 16em;
+  }
+  .things-to-do-caption-6{
+    /* display */
+    height: 14em;
+    line-height: 1.1em;
+    padding: 1em;
+    width: 14em;
+  }
+  .things-to-do-7{
+    /* things to do gallery grid */
+    grid-column: 1 / 5;
+  }
+  .things-to-do-image-7{
+    /* display */
+    height: 16em;
+    width: 16em;
+  }
+  .things-to-do-caption-7{
+    /* display */
+    height: 14em;
+    line-height: 1.1em;
+    padding: 1em;
+    width: 13.9em;
+  }
+  .things-to-do-8{
+    /* things to do gallery grid */
+    grid-column: 5 / 9;
+  }
+  .things-to-do-image-8{
+    /* display */
+    height: 16em;
+    width: 16em;
+  }
+  .things-to-do-caption-8{
+    /* display */
+    height: 14em;
+    line-height: 1.1em;
+    padding: 1em;
+    position: absolute;
+    width: 14em;
+  }
+  .things-to-do-9{
+    /* things to do gallery grid */
+    grid-column: 9 / 13;
+  }
+  .things-to-do-image-9{
+    /* display */
+    height: 16em;
+    width: 16em;
+  }
+  .things-to-do-caption-9{
+    /* display */
+    height: 14em;
+    line-height: 1.1em;
+    padding: 1em;
+    position: absolute;
+    width: 14em;
+  }
+
+  /* tips */
+  #tips{
+    /* things to do grid */
+    grid-column: 3 / 11;
+    grid-row: auto;
+  }
+  .picked-question{
+    font-size: 1.25em;
+  }
+  .tips-questions{
+    /* things to do grid */
+    grid-column: 3 / 11;
+  }
+  .tips-question-1{
+    /* things to do grid */
+    grid-column: 3 / 11;
+  }
+  .tips-question-2{
+    /* things to do grid */
+    grid-column: 3 / 11;
+  }
+  .tips-question-3{
+    /* things to do grid */
+    grid-column: 3 / 11;
+  }
+}
+@media only screen and (min-width: 85em){
+  /* header */
+  #main-header{
+    background-color: rgb( 23, 32, 42 );
+  }
+
+  /* introduction */
+  .introduction-title{
+    /* font */
+    font-size: 3em;
+  }
+  .introduction-image-1{
+    /* introduction grid */
+    grid-column: 3 / 11;
+  }
+  .introduction-image-1 img{
+    width: 50em;
+  }
+  .introduction-image-2{
+    /* introduction grid */
+    grid-column: 3 / 11;
+  }
+  .introduction-image-2 img{
+    width: 50em;
+  }
+  .introduction-image-3{
+    /* introduction grid */
+    grid-column: 3 / 11;
+  }
+  .introduction-image-3 img{
+    width: 50em;
+  }
+  .next{
+    margin: 1em;
+    margin-right: 8em;
+  }
+  .back{
+    margin: 1em;
+    margin-left: 8em;
+  }
+  #introduction{
+    grid-column: 3 / 11;
+  }
+  #introduction img{
+    width: 40em;
+  }
+
+  /* things to do */
+  #things-to-do{
+    /* things to do grid */
+    grid-column: 3 / 11;
+    grid-row: auto;
+  }
+  .things-to-do-gallery{
+    /* things to do grid */
+    grid-column: 3 / 11;
+    /* things to do gallery grid */
+    grid-gap: 1em;
+    grid-row-gap: 2em;
+    /* display */
+    padding-top: 1em;
+    padding-left: 0.5em;
+  }
+  .things-to-do-1{
+    /* things to do gallery grid */
+    grid-column: 1 / 5;
+  }
+  .things-to-do-image-1{
+    /* display */
+    height: 18em;
+    width: 18em;
+  }
+  .things-to-do-caption-1{
+    /* display */
+    height: 16em;
+    line-height: 1.5em;
+    padding: 1em;
+    width: 16em;
+  }
+  .things-to-do-2{
+    /* things to do gallery grid */
+    grid-column: 5 / 9;
+  }
+  .things-to-do-image-2{
+    /* display */
+    height: 18em;
+    width: 18em;
+  }
+  .things-to-do-caption-2{
+    /* display */
+    height: 16em;
+    line-height: 1.5em;
+    padding: 1em;
+    width: 15.9em;
+  }
+  .things-to-do-3{
+    /* things to do gallery grid */
+    grid-column: 9 / 13;
+  }
+  .things-to-do-image-3{
+    /* display */
+    height: 18em;
+    width: 18em;
+  }
+  .things-to-do-caption-3{
+    /* display */
+    height: 16em;
+    line-height: 1.5em;
+    padding: 1em;
+    width: 15.9em;
+  }
+  .things-to-do-4{
+    /* things to do gallery grid */
+    grid-column: 1 / 5;
+  }
+  .things-to-do-image-4{
+    /* display */
+    height: 18em;
+    width: 18em;
+  }
+  .things-to-do-caption-4{
+    /* display */
+    height: 16em;
+    line-height: 1.5em;
+    padding: 1em;
+    width: 16em;
+  }
+  .things-to-do-5{
+    /* things to do gallery grid */
+    grid-column: 5 / 9;
+  }
+  .things-to-do-image-5{
+    /* display */
+    height: 18em;
+    width: 18em;
+  }
+  .things-to-do-caption-5{
+    /* display */
+    height: 16em;
+    line-height: 1.5em;
+    padding: 1em;
+    width: 16em;
+  }
+  .things-to-do-6{
+    /* things to do gallery grid */
+    grid-column: 9 / 13;
+  }
+  .things-to-do-image-6{
+    /* display */
+    height: 18em;
+    width: 18em;
+  }
+  .things-to-do-caption-6{
+    /* display */
+    height: 16em;
+    line-height: 1.5em;
+    padding: 1em;
+    width: 16em;
+  }
+  .things-to-do-7{
+    /* things to do gallery grid */
+    grid-column: 1 / 5;
+  }
+  .things-to-do-image-7{
+    /* display */
+    height: 18em;
+    width: 18em;
+  }
+  .things-to-do-caption-7{
+    /* display */
+    height: 16em;
+    line-height: 1.5em;
+    padding: 1em;
+    width: 15.9em;
+  }
+  .things-to-do-8{
+    /* things to do gallery grid */
+    grid-column: 5 / 9;
+  }
+  .things-to-do-image-8{
+    /* display */
+    height: 18em;
+    width: 18em;
+  }
+  .things-to-do-caption-8{
+    /* display */
+    height: 16em;
+    line-height: 1.5em;
+    padding: 1em;
+    width: 16em;
+  }
+  .things-to-do-9{
+    /* things to do gallery grid */
+    grid-column: 9 / 13;
+  }
+  .things-to-do-image-9{
+    /* display */
+    height: 18em;
+    width: 18em;
+  }
+  .things-to-do-caption-9{
+    /* display */
+    height: 16em;
+    line-height: 1.5em;
+    padding: 1em;
+    width: 16em;
+  }
+
+  /* tips */
+  #tips{
+    /* things to do grid */
+    grid-column: 3 / 11;
+    grid-row: auto;
+  }
+  .picked-question{
+    font-size: 1.25em;
+  }
+  .tips-questions{
+    /* things to do grid */
+    grid-column: 3 / 11;
+  }
+  .tips-question-1{
+    /* things to do grid */
+    grid-column: 3 / 11;
+  }
+  .tips-question-2{
+    /* things to do grid */
+    grid-column: 3 / 11;
+  }
+  .tips-question-3{
+    /* things to do grid */
+    grid-column: 3 / 11;
+  }
 }
