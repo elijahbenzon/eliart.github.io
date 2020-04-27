@@ -13,6 +13,8 @@
     <!-- css and font links -->
     <link rel="stylesheet" href="styles/benzonart_styles.css">
     <link href="https://fonts.googleapis.com/css?family=Barlow:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <!-- global site tag (gtag.js) - google analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164002554-1"></script>
     <script>
@@ -27,7 +29,7 @@
     <header class="header-main-wrapper">
       <!-- logo -->
       <section class="logo">
-        <a href="benzonart_main.html"><img src="images/logo_black.png" width="150em"/></a>
+        <a href="benzonart_main.html"><img src="./images/logo_black.png" width="150em"/></a>
       </section>
       <!-- navigation bar -->
       <nav class="navigation">
@@ -47,10 +49,11 @@
     <section class="introduction-main-wrapper">
       <h2> Introduction </h2>
       <p> Elijah Benzon, also known as Eli, strives to explore all different media of art to voice personal issues and
-      societal concerns. Inspired by his last few semesters in university and the impact of COVID-19, Elijah has started a new
-      series of artwork labeled "<b>Identity Crisis</b>", where he explores the events and thoughts he experienced during these
-      times. He hopes his work will inspire others to embrace their true selves and make others aware of the current issues
-      with society. </p>
+      societal concerns. Inspired by experiences such as his last few semesters in university and the impact of COVID-19,
+      Elijah has started a new series of artwork known as "<b>Identity Crisis</b>", where he explores issues about self-identity
+      and personal growth and offers a new perspective of certain norms in society.He hopes his work will inspire others to embrace
+      their true selves and make others aware of the current issues with society. </p>
+
       <p> Additionally, through his artwork, Eli wants to show the evolution of style, his inspirations for his work, and how
       his style has changed through time and personal growth. He believes origins are important to understand an individual as
       a whole, and he hopes you will find inspiration to create regardless of skill or material. </p>
@@ -58,11 +61,14 @@
     <!-- latest content section -->
     <section class="latest-content-main-wrapper">
       <h3 class="latest-content-title"> Check out my latest content: </h3>
-
+      <figure class="main-content-1">
+        <img src="./images/Identity_Crisis/identity-crisis-1-sqaure.JPG" width="200em"/>
+        <figcaption> Link </figcaption>
+      </figure>
     </section>
     <!-- articles -->
     <section class="articles-main-content">
-      T
+
     </section>
     <!-- the footer -->
     <footer class="footer-main-wrapper">
@@ -84,7 +90,13 @@
     </footer>
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
     <script type="text/javascript">
+      // hamburger navigation
+      $('.menu-toggle').click(function() {
+        $('ul').toggleClass('opening');
+        $(this).toggleClass('open');
+      })
       // sticky navigation bar
       $(document).ready(function() {
         var stickyNavTop = $(".navigation").offset().top;
