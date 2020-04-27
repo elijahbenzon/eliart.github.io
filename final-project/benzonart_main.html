@@ -27,7 +27,7 @@
     <header class="header-main-wrapper">
       <!-- logo -->
       <section class="logo">
-        <a href="benzonart_main.html"><img src="images/logo_black.png" width="150em"></a>
+        <a href="benzonart_main.html"><img src="images/logo_black.png" width="150em"/></a>
       </section>
       <!-- navigation bar -->
       <nav class="navigation">
@@ -45,8 +45,24 @@
     </header>
     <!-- introduction -->
     <section class="introduction-main-wrapper">
-      <h2> Insert Title Here </h2>
-      <p> Insert Text Here </p>
+      <h2> Introduction </h2>
+      <p> Elijah Benzon, also known as Eli, strives to explore all different media of art to voice personal issues and
+      societal concerns. Inspired by his last few semesters in university and the impact of COVID-19, Elijah has started a new
+      series of artwork labeled "<b>Identity Crisis</b>", where he explores the events and thoughts he experienced during these
+      times. He hopes his work will inspire others to embrace their true selves and make others aware of the current issues
+      with society. </p>
+      <p> Additionally, through his artwork, Eli wants to show the evolution of style, his inspirations for his work, and how
+      his style has changed through time and personal growth. He believes origins are important to understand an individual as
+      a whole, and he hopes you will find inspiration to create regardless of skill or material. </p>
+    </section>
+    <!-- latest content section -->
+    <section class="latest-content-main-wrapper">
+      <h3 class="latest-content-title"> Check out my latest content: </h3>
+
+    </section>
+    <!-- articles -->
+    <section class="articles-main-content">
+      T
     </section>
     <!-- the footer -->
     <footer class="footer-main-wrapper">
@@ -66,6 +82,25 @@
         © 2020 ELIJAH BENZON
       </section>
     </footer>
+    <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      // sticky navigation bar
+      $(document).ready(function() {
+        var stickyNavTop = $(".navigation").offset().top;
+        var stickyNav = function(){
+          var scrollTop = $(window).scrollTop();
+          if (scrollTop > stickyNavTop) {
+            $(".navigation").addClass("sticky");
+          } else {
+            $(".navigation").removeClass("sticky");
+          }
+        };
+        stickyNav();
+        $(window).scroll(function() {
+          stickyNav();
+        });
+      });
+    </script>
   </body>
 </html>

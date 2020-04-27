@@ -67,5 +67,23 @@
       </section>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      // sticky navigation bar
+      $(document).ready(function() {
+        var stickyNavTop = $(".navigation").offset().top;
+        var stickyNav = function(){
+          var scrollTop = $(window).scrollTop();
+          if (scrollTop > stickyNavTop) {
+            $(".navigation").addClass("sticky");
+          } else {
+            $(".navigation").removeClass("sticky");
+          }
+        };
+        stickyNav();
+        $(window).scroll(function() {
+          stickyNav();
+        });
+      });
+    </script>
   </body>
 </html>

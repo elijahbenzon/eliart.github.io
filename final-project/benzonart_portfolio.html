@@ -43,6 +43,10 @@
       </nav>
       <h1 class="header-title"> Benzon Art </h1>
     </header>
+    <!-- links to artwork -->
+    <section class="links-to-artwork">
+      <img src="./images/Element_of_Water/water-6-square.JPG" width="400em" class="portfolio-link-1">
+    </section>
     <!-- the footer -->
     <footer class="footer-main-wrapper">
       <section class="footer-outline">
@@ -61,6 +65,25 @@
         © 2020 ELIJAH BENZON
       </section>
     </footer>
+    <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      // sticky navigation bar
+      $(document).ready(function() {
+        var stickyNavTop = $(".navigation").offset().top;
+        var stickyNav = function(){
+          var scrollTop = $(window).scrollTop();
+          if (scrollTop > stickyNavTop) {
+            $(".navigation").addClass("sticky");
+          } else {
+            $(".navigation").removeClass("sticky");
+          }
+        };
+        stickyNav();
+        $(window).scroll(function() {
+          stickyNav();
+        });
+      });
+    </script>
   </body>
 </html>

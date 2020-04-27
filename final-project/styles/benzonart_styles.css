@@ -27,13 +27,14 @@ body {
   /* main grid */
   grid-column: 1 / 13;
   grid-row: auto;
-  /* header main wrapper */
+  /* header grid */
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: auto;
   /* background image */
-  background-image: url("../images/Main/main-1.JPG");
+  background-image: url("../images/Main/main-1.jpg");
   background-size: cover;
+
 }
 .logo{
   /* header grid */
@@ -133,6 +134,19 @@ nav a:hover, nav a:focus {
   transform: translateY(-1px) rotate(-90deg);
 }
 
+/* sticky navigation bar */
+.sticky{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+}
+.sticky + .content{
+  padding-top: 60px;
+}
+
 /* introduction */
 .introduction-main-wrapper{
   /* main grid */
@@ -140,10 +154,70 @@ nav a:hover, nav a:focus {
   grid-row: auto;
   /* display */
   padding: 1em;
-  padding-bottom: 3.5em;
-  padding-top: 3.5em;
-  /* font */
-  font-size: 1.15em;
+  padding-bottom: 2.5em;
+  padding-top: 2.5em;
+}
+
+/* links to artwork */
+.links-to-artwork{
+  /* main grid */
+  grid-column: 3 / 11;
+  grid-row: auto;
+  /* latest content grid */
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto;
+  /* display */
+  padding: 1em;
+  padding-bottom: 2.5em;
+  padding-top: 2.5em;
+}
+
+/* latest content section */
+.latest-content-main-wrapper{
+  /* main grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* latest content grid */
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto;
+  /* display */
+  background-color: rgb( 23, 32, 42 );
+  color: rgb( 234, 236, 238 );
+}
+.latest-content-title{
+  /* latest content grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  padding-left: 1em;
+}
+.latest-content-gallery{
+  /* latest content grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+}
+
+
+/* articles */
+.articles-main-content{
+  /* main grid */
+  grid-column: 3 / 11;
+  grid-row: auto;
+  /* articles grid */
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto;
+  /* display */
+  padding: 1em;
+  padding-bottom: 2.5em;
+  padding-top: 2.5em;
+}
+.portfolio-link-1{
+  /* articles grid */
+  grid-column: 1 / 7;
+  grid-row: auto;
 }
 
 /* footer */
