@@ -32,9 +32,9 @@ body {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: auto;
   /* background image */
-  background-image: url("./images/Main/main-1.jpg");
+  background-image: url("./images/main/main-1.JPG");
   background-size: cover;
-
+  background-repeat: no-repeat;
 }
 .logo{
   /* header grid */
