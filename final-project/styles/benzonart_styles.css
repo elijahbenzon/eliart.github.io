@@ -32,7 +32,7 @@ body {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: auto;
   /* background image */
-  background-image: url("../images/Main/main-1.jpg");
+  background-image: url("./images/Main/main-1.jpg");
   background-size: cover;
 
 }
