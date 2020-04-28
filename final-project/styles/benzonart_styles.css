@@ -32,7 +32,7 @@ body {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: auto;
   /* background image */
-  background-image: url("../images/main/main.gif");
+  background-image: url("../images/main/main-1.gif");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -161,16 +161,32 @@ nav a:hover, nav a:focus {
 /* links to artwork */
 .links-to-artwork{
   /* main grid */
-  grid-column: 3 / 11;
+  grid-column: 1 / 13;
   grid-row: auto;
   /* latest content grid */
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: auto;
+  grid-gap: 0.75em;
   /* display */
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1em;
-  padding-bottom: 2.5em;
-  padding-top: 2.5em;
+  padding-bottom: 3.25em;
+  padding-top: 3.5em;
+}
+.links-to-artwork img:hover{
+  opacity: 80%;
+}
+.links-to-artwork figure{
+  color: rgb( 23, 32, 42 );
+  margin: 0.25em;
+}
+.links-to-artwork figcaption{
+  font-weight: 600;
+  padding-top: 0.5em;
+  text-align: center;
 }
 
 /* latest content section */
@@ -185,6 +201,10 @@ nav a:hover, nav a:focus {
   /* display */
   background-color: rgb( 23, 32, 42 );
   color: rgb( 234, 236, 238 );
+  padding: 1em;
+}
+.latest-content-main-wrapper img:hover{
+  opacity: 80%;
 }
 .latest-content-title{
   /* latest content grid */
@@ -198,7 +218,8 @@ nav a:hover, nav a:focus {
   grid-column: 1 / 13;
   grid-row: auto;
 }
-figcaption{
+.latest-content-main-wrapper figcaption{
+  font-size: 0.75em;
   text-align: center;
 }
 .main-content-1{
@@ -209,7 +230,30 @@ figcaption{
   margin-left: auto;
   margin-right: auto;
 }
-
+.main-content-2{
+  /* latest content grid */
+  grid-column: 4 / 7;
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-content-3{
+  /* latest content grid */
+  grid-column: 7 / 10;
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-content-4{
+  /* latest content grid */
+  grid-column: 10 / 13;
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* articles */
 .articles-main-content{
@@ -224,11 +268,6 @@ figcaption{
   padding: 1em;
   padding-bottom: 2.5em;
   padding-top: 2.5em;
-}
-.portfolio-link-1{
-  /* articles grid */
-  grid-column: 1 / 7;
-  grid-row: auto;
 }
 
 /* footer */
