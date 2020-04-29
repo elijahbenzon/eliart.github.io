@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- the main meta charset -->
+    <meta charset="utf-8">
+    <!-- meta names -->
+    <meta name="author" content="Elijah Benzon">
+    <meta name="description" content="Elijah Benzon's online art portfolio">
+    <meta name="keywords" content="Elijah Benzon, art, portfolio, drawing, sketches">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- main title -->
+    <title>Benzon Art • Sketch Book</title>
+    <!-- css and font links -->
+    <link rel="stylesheet" href="styles/benzonart_styles.css">
+    <link rel="stylesheet" href="styles/benzonart_portfolio_styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <!-- global site tag (gtag.js) - google analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164002554-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-164002554-1');
+    </script>
+  </head>
+  <body class="main-wrapper">
+    <!-- the header -->
+    <header class="header-main-wrapper-portfolio">
+      <!-- logo -->
+      <section class="logo">
+        <a href="benzonart_main.html"><img src="./images/logo_black.png" width="150em"/></a>
+      </section>
+      <!-- navigation bar -->
+      <nav class="navigation">
+        <div class="menu-toggle">
+          <div class="hamburger"></div>
+        </div>
+        <ul class="open desktop">
+          <li><a href="benzonart_about.html">About</a></li>
+          <li><a href="benzonart_portfolio.html">Portfolio</a></li>
+          <li><a href="benzonart_blog.html">Blog</a></li>
+          <li><a href="benzonart_contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- introduction -->
+    <section class="introduction-main-wrapper">
+      <h1> Title </h1>
+      <p> Text </p>
+    </section>
+    <!-- the footer -->
+    <footer class="footer-main-wrapper">
+      <section class="footer-outline">
+        <a href="benzonart_main.html"><b>Benzon Art</b></a><br>
+        <a href="benzonart_about.html">About</a><br>
+        <a href="benzonart_portfolio.html">Portfolio</a><br>
+        <a href="benzonart_blog.html">Blog</a><br>
+        <a href="benzonart_contact.html">Contact</a>
+      </section>
+      <section class="footer-social-media">
+        <b>Social Media</b><br>
+        <a href="https://www.instagram.com/eli._.benzon/">Main Instagram</a><br>
+        <a href="https://www.instagram.com/eli._.benzon.jpeg/">Art Instagram</a>
+      </section>
+      <section class="footer-copyright">
+        © 2020 ELIJAH BENZON
+      </section>
+    </footer>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript">
+      // hamburger navigation
+      $('.menu-toggle').click(function() {
+        $('ul').toggleClass('opening');
+        $(this).toggleClass('open');
+      })
+      // sticky navigation bar
+      $(document).ready(function() {
+        var stickyNavTop = $(".navigation").offset().top;
+        var stickyNav = function(){
+          var scrollTop = $(window).scrollTop();
+          if (scrollTop > stickyNavTop) {
+            $(".navigation").addClass("sticky");
+          } else {
+            $(".navigation").removeClass("sticky");
+          }
+        };
+        stickyNav();
+        $(window).scroll(function() {
+          stickyNav();
+        });
+      });
+    </script>
+  </body>
+</html>

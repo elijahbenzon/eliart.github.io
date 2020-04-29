@@ -1,0 +1,128 @@
+/* content shared on all formats */
+
+/* gallery main wrapper */
+.gallery-main-wrapper{
+  /* main gallery grid */
+  grid-column: 3 / 11;
+  grid-row: auto;
+  /* gallery grid */
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 1em;
+  /* display */
+  padding-bottom: 4em;
+}
+button{
+  background-color: rgb( 23, 32, 42 );
+  border: none;
+  border-radius: 1em;
+  color: white;
+  float: right;
+  font-family: 'Barlow', sans-serif;
+  padding: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-decoration: none;
+}
+button:hover{
+  background-color: rgb( 44, 62, 80 );
+  border: none;
+  border-radius: 1em;
+  color: white;
+  cursor: pointer;
+  font-family: 'Barlow', sans-serif;
+  padding: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-decoration: none;
+}
+.art-12{
+  /* gallery grid */
+  grid-column: 1 / 5;
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+}
+.art-12:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-12-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
+.art-11{
+  /* gallery grid */
+  grid-column: 5 / 9;
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+}
+.art-11:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-11-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
+.art-10{
+  /* gallery grid */
+  grid-column: 9 / 13;
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+}
+.art-10:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-10-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
+.art-9{
+  /* gallery grid */
+  grid-column: 1 / 5;
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+}
+.art-9:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-9-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  border-radius: 0.75em;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}

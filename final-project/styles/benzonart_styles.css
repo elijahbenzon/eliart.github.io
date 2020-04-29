@@ -36,6 +36,15 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.header-main-wrapper-portfolio{
+  /* main grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* header grid */
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto;
+}
 .logo{
   /* header grid */
   grid-column: 1 / 13;
@@ -174,10 +183,14 @@ nav a:hover, nav a:focus {
   margin-right: auto;
   padding: 1em;
   padding-bottom: 3.25em;
-  padding-top: 3.5em;
+  padding-top: 4em;
+}
+.links-to-artwork img{
+  border-radius: 1em;
 }
 .links-to-artwork img:hover{
-  opacity: 80%;
+  scale: 103%;
+  opacity: 75%;
 }
 .links-to-artwork figure{
   color: rgb( 23, 32, 42 );

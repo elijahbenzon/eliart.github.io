@@ -9,7 +9,7 @@
     <meta name="keywords" content="Elijah Benzon, art, portfolio, drawing, sketches">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- main title -->
-    <title>Benzon Art</title>
+    <title>Benzon Art • Portfolio</title>
     <!-- css and font links -->
     <link rel="stylesheet" href="styles/benzonart_styles.css">
     <link href="https://fonts.googleapis.com/css?family=Barlow:400,600&display=swap" rel="stylesheet">
@@ -45,24 +45,24 @@
     </header>
     <!-- links to artwork -->
     <section class="links-to-artwork">
-      <figure>
+      <figure class="hover-1">
         <a href="benzonart_identitycrisis.html"><img src="./images/portfolio/portfolio-1.jpg" width="250em"></a>
       <figcaption> IDENTITY CRISIS </figcaption>
       </figure>
-      <figure>
-        <a href="benzonart_elementofwater"><img src="./images/portfolio/portfolio-2.jpg" width="250em"></a>
+      <figure class="hover-2">
+        <a href="benzonart_elementofwater.html"><img src="./images/portfolio/portfolio-2.jpg" width="250em"></a>
       <figcaption> ELEMENT OF WATER </figcaption>
       </figure>
-      <figure>
-        <a href="benzonart_latestwork"><img src="./images/portfolio/portfolio-3.jpg" width="250em"></a>
+      <figure class="hover-3">
+        <a href="benzonart_latestwork.html"><img src="./images/portfolio/portfolio-3.jpg" width="250em"></a>
       <figcaption> LATEST WORK </figcaption>
       </figure>
-      <figure>
-        <a href="benzonart_sketchbook"><img src="./images/portfolio/portfolio-4.jpg" width="250em"></a>
+      <figure class="hover-4">
+        <a href="benzonart_sketchbook.html"><img src="./images/portfolio/portfolio-4.jpg" width="250em"></a>
       <figcaption> SKETCH BOOK </figcaption>
       </figure>
-      <figure>
-        <a href="benzonart_archives"><img src="./images/portfolio/portfolio-5.jpg" width="250em"></a>
+      <figure class="hover-5">
+        <a href="benzonart_archives.html"><img src="./images/portfolio/portfolio-5.jpg" width="250em"></a>
       <figcaption> ARCHIVES </figcaption>
       </figure>
     </section>
@@ -102,6 +102,8 @@
         $(window).scroll(function() {
           stickyNav();
         });
+        $(".links-to-artwork").css('display', 'none');
+        $(".links-to-artwork").fadeIn(1000);
       });
     </script>
   </body>
