@@ -12,7 +12,10 @@
   grid-gap: 1em;
   /* display */
   padding-bottom: 4em;
+  text-align: center;
 }
+
+/* button */
 button{
   background-color: rgb( 23, 32, 42 );
   border: none;
@@ -24,6 +27,12 @@ button{
   padding-left: 1em;
   padding-right: 1em;
   text-decoration: none;
+}
+.button{
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
 }
 button:hover{
   background-color: rgb( 44, 62, 80 );
@@ -37,7 +46,9 @@ button:hover{
   padding-right: 1em;
   text-decoration: none;
 }
-.art-12{
+
+/* galleries */
+.art-1{
   /* gallery grid */
   grid-column: 1 / 5;
   grid-row: auto;
@@ -46,11 +57,210 @@ button:hover{
   margin-right: auto;
   padding: 0.5em;
 }
-.art-12:hover{
+.art-1:hover{
   cursor: pointer;
   opacity: 75%;
 }
-.art-12-info{
+.art-1-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
+.art-2{
+  /* gallery grid */
+  grid-column: 5 / 9;
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+}
+.art-2:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-2-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
+.art-3{
+  /* gallery grid */
+  grid-column: 9 / 13;
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+}
+.art-3:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-3-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
+.art-4{
+  /* gallery grid */
+  grid-column: 1 / 5;
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+}
+.art-4:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-4-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  border-radius: 0.75em;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
+.art-5{
+  /* gallery grid */
+  grid-column: 5 / 9;
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+}
+.art-5:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-5-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
+.art-6{
+  /* gallery grid */
+  grid-column: 9 / 13;
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+}
+.art-6:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-6-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
+.art-7{
+  /* gallery grid */
+  grid-column: 1 / 5;
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+}
+.art-7:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-7-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
+.art-8{
+  /* gallery grid */
+  grid-column: 5 / 9;
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+}
+.art-8:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-8-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
+.art-9{
+  /* gallery grid */
+  grid-column: 9 / 13;
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+}
+.art-9:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-9-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
+.art-10{
+  /* gallery grid */
+  grid-column: 1 / 5;
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+}
+.art-10:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-10-info{
   /* galllery grid */
   grid-column: 1 / 13;
   grid-row: auto;
@@ -81,7 +291,7 @@ button:hover{
   padding: 1.5em;
   padding-bottom: 2.5em;
 }
-.art-10{
+.art-12{
   /* gallery grid */
   grid-column: 9 / 13;
   grid-row: auto;
@@ -90,39 +300,16 @@ button:hover{
   margin-right: auto;
   padding: 0.5em;
 }
-.art-10:hover{
+.art-12:hover{
   cursor: pointer;
   opacity: 75%;
 }
-.art-10-info{
+.art-12-info{
   /* galllery grid */
   grid-column: 1 / 13;
   grid-row: auto;
   /* display */
   display: none;
-  padding: 1.5em;
-  padding-bottom: 2.5em;
-}
-.art-9{
-  /* gallery grid */
-  grid-column: 1 / 5;
-  grid-row: auto;
-  /* display */
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0.5em;
-}
-.art-9:hover{
-  cursor: pointer;
-  opacity: 75%;
-}
-.art-9-info{
-  /* galllery grid */
-  grid-column: 1 / 13;
-  grid-row: auto;
-  /* display */
-  display: none;
-  border-radius: 0.75em;
   padding: 1.5em;
   padding-bottom: 2.5em;
 }
