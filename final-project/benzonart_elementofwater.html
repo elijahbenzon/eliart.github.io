@@ -9,7 +9,7 @@
     <meta name="keywords" content="Elijah Benzon, art, portfolio, drawing, sketches">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- main title -->
-    <title>Benzon Art • Element of Water</title>
+    <title>Benzon Art • Latest Work</title>
     <!-- css and font links -->
     <link rel="stylesheet" href="styles/benzonart_styles.css">
     <link rel="stylesheet" href="styles/benzonart_portfolio_styles.css">
@@ -47,8 +47,82 @@
     </header>
     <!-- introduction -->
     <section class="introduction-main-wrapper">
-      <h1> Title </h1>
-      <p> Text </p>
+      <h1> Element of Water </h1>
+      <p> Water is perhaps the most common thing known to humans, but despite its commonplace, it possesses the most wonderful
+      and miraculous properties. It has the ability to change form whether an energetic gas, a maleable liquid, or a hard solid.
+      Water can heal yet destroy. Every living things needs it to survive, but too much of it can kill. In this series, Elijah shows
+      this diverse spectrum of abilities the element of water embodies. </p>
+    </section>
+    <!-- gallery -->
+    <section class="gallery-main-wrapper">
+      <!-- hidden -->
+      <div class="art-1-info">
+        <h2> Tear </h2>
+        <p> 2015 <br>
+        Graphite Pencil <br>
+        11 X 8 " </p><br>
+        <img src="./images/element-of-water/water-1-full.jpg" width="450em"/><br>
+        <div class="button"><button type="button" name="close" class="button-close">Close</button></div>
+      </div>
+      <div class="art-2-info">
+        <h2> Paper Boats </h2>
+        <p> 2015 <br>
+        Water Color <br>
+        15 X 12 " </p><br>
+        <img src="./images/element-of-water/water-2-full.jpg" width="450em"/> <br>
+        <div class="button"><button type="button" name="close" class="button-close">Close</button></div>
+      </div>
+      <div class="art-3-info">
+        <h2> Tea Pots </h2>
+        <p> 2015 <br>
+        Graphite Pencil <br>
+        19 X 15 " </p><br>
+        <img src="./images/element-of-water/water-3-full.jpg" width="450em"/> <br>
+        <div class="button"><button type="button" name="close" class="button-close">Close</button></div>
+      </div>
+      <div class="art-4-info">
+        <h2> Grab </h2>
+        <p> 2015 <br>
+        Graphite Pencil, Ink Pen <br>
+        14 X 9 " </p><br>
+        <img src="./images/element-of-water/water-4-full.jpg" width="600em"/> <br>
+        <div class="button"><button type="button" name="close" class="button-close">Close</button></div>
+      </div>
+      <div class="art-5-info">
+        <h2> Healing </h2>
+        <p> 2015 <br>
+        Graphite Pencil, Oil Pastel <br>
+        19 X 15 " </p><br>
+        <img src="./images/element-of-water/water-5-full.jpg" width="450em"/> <br>
+        <div class="button"><button type="button" name="close" class="button-close">Close</button></div>
+      </div>
+      <div class="art-6-info">
+        <h2> Destruction and Refuge </h2>
+        <p> 2015 <br>
+        Ink Pen, Oil Pastel <br>
+        20 X 14 " </p><br>
+        <img src="./images/element-of-water/water-6-full.jpg" width="750em"/> <br>
+        <div class="button"><button type="button" name="close" class="button-close">Close</button></div>
+      </div>
+      <!-- shown -->
+      <div class="art-1">
+        <img src="./images/element-of-water/water-1-square.jpg" width="275em" class="art-1-image"/>
+      </div>
+      <div class="art-2">
+        <img src="./images/element-of-water/water-2-square.jpg" width="275em" class="art-2-image"/>
+      </div>
+      <div class="art-3">
+        <img src="./images/element-of-water/water-3-square.jpg" width="275em" class="art-3-image"/>
+      </div>
+      <div class="art-4">
+        <img src="./images/element-of-water/water-4-square.jpg" width="275em" class="art-4-image"/>
+      </div>
+      <div class="art-5">
+        <img src="./images/element-of-water/water-5-square.jpg" width="275em" class="art-5-image"/>
+      </div>
+      <div class="art-6">
+        <img src="./images/element-of-water/water-6-square.jpg" width="275em" class="art-6-image"/>
+      </div>
     </section>
     <!-- the footer -->
     <footer class="footer-main-wrapper">
@@ -76,7 +150,7 @@
       $('.menu-toggle').click(function() {
         $('ul').toggleClass('opening');
         $(this).toggleClass('open');
-      })
+      });
       // sticky navigation bar
       $(document).ready(function() {
         var stickyNavTop = $(".navigation").offset().top;
@@ -91,6 +165,90 @@
         stickyNav();
         $(window).scroll(function() {
           stickyNav();
+        });
+      });
+      // fade in
+      $(document).ready(function() {
+        $(".introduction-main-wrapper").css('display', 'none');
+        $(".introduction-main-wrapper").fadeIn(500);
+        $(".gallery-main-wrapper").css('display', 'none');
+        $(".gallery-main-wrapper").fadeIn(500);
+      });
+      // galleries
+      $(document).ready(function() {
+        $(".button-close").click(function() {
+          $(".art-1-info").hide(500);
+          $(".art-2-info").hide(500);
+          $(".art-3-info").hide(500);
+          $(".art-4-info").hide(500);
+          $(".art-5-info").hide(500);
+          $(".art-6-info").hide(500);
+        });
+        $(".art-6-image").click(function() {
+          $(".art-6-info").show(500);
+          $([document.documentElement, document.body]).animate({
+            scrollTop: $(".art-6-info").offset().top
+          }, 2000);
+          $(".art-1-info").hide(500);
+          $(".art-2-info").hide(500);
+          $(".art-3-info").hide(500);
+          $(".art-4-info").hide(500);
+          $(".art-5-info").hide(500);
+        });
+        $(".art-5-image").click(function() {
+          $(".art-5-info").show(500);
+          $([document.documentElement, document.body]).animate({
+            scrollTop: $(".art-5-info").offset().top
+          }, 2000);
+          $(".art-1-info").hide(500);
+          $(".art-2-info").hide(500);
+          $(".art-4-info").hide(500);
+          $(".art-3-info").hide(500);
+          $(".art-6-info").hide(500);
+        });
+        $(".art-4-image").click(function() {
+          $(".art-4-info").show(500);
+          $([document.documentElement, document.body]).animate({
+            scrollTop: $(".art-4-info").offset().top
+          }, 2000);
+          $(".art-1-info").hide(500);
+          $(".art-2-info").hide(500);
+          $(".art-3-info").hide(500);
+          $(".art-5-info").hide(500);
+          $(".art-6-info").hide(500);
+        });
+        $(".art-3-image").click(function() {
+          $(".art-3-info").show(500);
+          $([document.documentElement, document.body]).animate({
+            scrollTop: $(".art-3-info").offset().top
+          }, 2000);
+          $(".art-1-info").hide(500);
+          $(".art-2-info").hide(500);
+          $(".art-4-info").hide(500);
+          $(".art-5-info").hide(500);
+          $(".art-6-info").hide(500);
+        });
+        $(".art-2-image").click(function() {
+          $(".art-2-info").show(500);
+          $([document.documentElement, document.body]).animate({
+            scrollTop: $(".art-2-info").offset().top
+          }, 2000);
+          $(".art-1-info").hide(500);
+          $(".art-3-info").hide(500);
+          $(".art-4-info").hide(500);
+          $(".art-5-info").hide(500);
+          $(".art-6-info").hide(500);
+        });
+        $(".art-1-image").click(function() {
+          $(".art-1-info").show(500);
+          $([document.documentElement, document.body]).animate({
+            scrollTop: $(".art-1-info").offset().top
+          }, 2000);
+          $(".art-2-info").hide(500);
+          $(".art-3-info").hide(500);
+          $(".art-4-info").hide(500);
+          $(".art-5-info").hide(500);
+          $(".art-6-info").hide(500);
         });
       });
     </script>
