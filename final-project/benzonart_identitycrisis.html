@@ -47,8 +47,25 @@
     </header>
     <!-- introduction -->
     <section class="introduction-main-wrapper">
-      <h1> Title </h1>
+      <h1> Identity Crisis </h1>
       <p> Text </p>
+    </section>
+    <!-- gallery -->
+    <section class="gallery-main-wrapper">
+      <!-- hidden -->
+      <div class="art-1-info">
+        <h2> Who Am I, Vol. 2 </h2>
+        <p> 2020 <br>
+        Lead HB Pencil, Scotch Tape <br>
+        18 X 14 " </p><br>
+        <img src="./images/identity-crisis/identity-crisis-1-full.jpg" width="550em"/><br>
+        <img src="./images/identity-crisis/identity-crisis-1-full-2.jpg" width="550em"/><br>
+        <div class="button"><button type="button" name="close" class="button-close">Close</button></div>
+      </div>
+      <!-- shown -->
+      <div class="art-1">
+        <img src="./images/identity-crisis/identity-crisis-1-square.jpg" width="275em" class="art-1-image"/>
+      </div>
     </section>
     <!-- the footer -->
     <footer class="footer-main-wrapper">
@@ -91,6 +108,18 @@
         stickyNav();
         $(window).scroll(function() {
           stickyNav();
+        });
+      });
+      // galleries
+      $(document).ready(function() {
+        $(".button-close").click(function() {
+          $(".art-1-info").hide(500);
+        });
+        $(".art-1-image").click(function() {
+          $(".art-1-info").show(500);
+          $([document.documentElement, document.body]).animate({
+            scrollTop: $(".art-1-info").offset().top
+          }, 2000);
         });
       });
     </script>

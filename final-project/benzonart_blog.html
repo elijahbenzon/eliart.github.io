@@ -45,8 +45,35 @@
     </header>
     <!-- introduction -->
     <section class="introduction-main-wrapper">
-      <h2> Insert Title Here </h2>
-      <p> Insert Text Here </p>
+      <h2> Welcome to My Blog! </h2>
+    </section>
+    <!-- blog-box -->
+    <section class="blog-main-wrapper">
+      <div class="blog-box">
+        <img src="./images/sketch-book/sketch-5-square.jpg" width="550em" class="art-5-image"/>
+        <div class="blog-text">
+          <h3 > YouTube Channel: Coming Soon! </h3>
+          2020 <br> I am excited to announce that I am currently preparaing to make a YouTube channel showing the process
+          of me making my artwork, tutorials, and some challenges. Please look forward for it!
+        </div>
+      </div>
+      <div class="blog-box">
+        <img src="./images/latest-work/latestwork-8-square.jpg" width="550em" class="art-8-image"/>
+        <div class="blog-text">
+          <h3 > Art Instagram </h3>
+          2020 <br> I am excited to announce that I have officially created my own art instagram! I will be showcasing my
+          latest artwork and the process behind them. This is a great way to reach out to me as well. Be sure to check it out!
+        </div>
+      </div>
+      <div class="blog-box">
+        <img src="./images/archives/archives-1-square.jpg" width="550em"/> <br>
+        <div class="blog-text">
+          <h3 > ArtFest & Suncoast Credit Union Honor Art Under 20 </h3>
+          2015 <br> Honored of being a recipient of the Fewster Family Scholarship Award in the
+          2015 Art Under 20 Show for my drawing, Finding Francine. <br><br> Check out the full article
+          <a href="https://artfestfortmyers.com/artfest-suncoast-credit-union-honor-art-under-20-winners/">here</a>.
+        </div>
+      </div>
     </section>
     <!-- the footer -->
     <footer class="footer-main-wrapper">
@@ -79,10 +106,29 @@
             $(".navigation").removeClass("sticky");
           }
         };
-        stickyNav();
-        $(window).scroll(function() {
+      });
+      // sticky navigation bar
+      $(document).ready(function() {
+          var stickyNavTop = $(".navigation").offset().top;
+          var stickyNav = function(){
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > stickyNavTop) {
+              $(".navigation").addClass("sticky");
+            } else {
+              $(".navigation").removeClass("sticky");
+            }
+          };
           stickyNav();
+          $(window).scroll(function() {
+            stickyNav();
+          });
         });
+      // fade in on refresh
+      $(document).ready(function() {
+        $(".introduction-main-wrapper").css('display', 'none');
+        $(".introduction-main-wrapper").fadeIn(500);
+        $(".blog-box").css('display', 'none');
+        $(".blog-box").fadeIn(500);
       });
     </script>
   </body>
