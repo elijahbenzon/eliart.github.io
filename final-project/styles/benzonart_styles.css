@@ -166,6 +166,15 @@ nav a:hover, nav a:focus {
   padding-bottom: 1em;
   padding-top: 2.5em;
 }
+.introduction-main-wrapper a{
+  text-decoration: none;
+}
+.introduction-main-wrapper a:link{
+  color: rgb( 44, 62, 80 );
+}
+.introduction-main-wrapper a:visited{
+  color: rgb( 44, 62, 80 );
+}
 
 /* links to artwork */
 .links-to-artwork{
@@ -214,6 +223,7 @@ nav a:hover, nav a:focus {
   /* display */
   color: rgb( 23, 32, 42 );
   padding: 1em;
+  padding-bottom: 3em;
 }
 .latest-content-main-wrapper img:hover{
   opacity: 80%;
