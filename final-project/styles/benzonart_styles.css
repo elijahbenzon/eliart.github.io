@@ -322,7 +322,7 @@ nav a:hover, nav a:focus {
 }
 
 /* Add Here styles for larger phones and tablets *//* Add Here styles for larger phones and tablets */
-@media (min-width:30em) {
+@media (min-width:25em) {
   /* header */
   .header-title{
     /* header grid */
