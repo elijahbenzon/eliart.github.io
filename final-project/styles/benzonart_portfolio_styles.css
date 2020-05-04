@@ -1,22 +1,18 @@
 /* content shared on all formats */
 
-/* gallery main wrapper */
+/* gallery main wrapper *//* gallery main wrapper *//* gallery main wrapper */
 .gallery-main-wrapper{
   /* main gallery grid */
-  grid-column: 3 / 11;
   grid-row: auto;
   /* gallery grid */
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: auto;
-  grid-gap: 1.25em;
-  grid-row-gap: 1.5em;
   /* display */
   padding-bottom: 4em;
   text-align: center;
 }
 
-/* button */
+/* button *//* button *//* button *//* button *//* button *//* button *//* button */
 button{
   background-color: rgb( 23, 32, 42 );
   border: none;
@@ -48,15 +44,13 @@ button:hover{
   text-decoration: none;
 }
 
-/* galleries */
+/* galleries *//* galleries *//* galleries *//* galleries *//* galleries *//* galleries */
 .art-1{
   /* gallery grid */
-  grid-column: 1 / 5;
   grid-row: auto;
   /* display */
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5em;
 }
 .art-1:hover{
   cursor: pointer;
@@ -73,12 +67,10 @@ button:hover{
 }
 .art-2{
   /* gallery grid */
-  grid-column: 5 / 9;
   grid-row: auto;
   /* display */
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5em;
 }
 .art-2:hover{
   cursor: pointer;
@@ -95,12 +87,10 @@ button:hover{
 }
 .art-3{
   /* gallery grid */
-  grid-column: 9 / 13;
   grid-row: auto;
   /* display */
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5em;
 }
 .art-3:hover{
   cursor: pointer;
@@ -117,12 +107,10 @@ button:hover{
 }
 .art-4{
   /* gallery grid */
-  grid-column: 1 / 5;
   grid-row: auto;
   /* display */
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5em;
 }
 .art-4:hover{
   cursor: pointer;
@@ -140,12 +128,10 @@ button:hover{
 }
 .art-5{
   /* gallery grid */
-  grid-column: 5 / 9;
   grid-row: auto;
   /* display */
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5em;
 }
 .art-5:hover{
   cursor: pointer;
@@ -162,12 +148,10 @@ button:hover{
 }
 .art-6{
   /* gallery grid */
-  grid-column: 9 / 13;
   grid-row: auto;
   /* display */
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5em;
 }
 .art-6:hover{
   cursor: pointer;
@@ -184,12 +168,10 @@ button:hover{
 }
 .art-7{
   /* gallery grid */
-  grid-column: 1 / 5;
   grid-row: auto;
   /* display */
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5em;
 }
 .art-7:hover{
   cursor: pointer;
@@ -206,12 +188,10 @@ button:hover{
 }
 .art-8{
   /* gallery grid */
-  grid-column: 5 / 9;
   grid-row: auto;
   /* display */
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5em;
 }
 .art-8:hover{
   cursor: pointer;
@@ -228,12 +208,10 @@ button:hover{
 }
 .art-9{
   /* gallery grid */
-  grid-column: 9 / 13;
   grid-row: auto;
   /* display */
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5em;
 }
 .art-9:hover{
   cursor: pointer;
@@ -250,12 +228,10 @@ button:hover{
 }
 .art-10{
   /* gallery grid */
-  grid-column: 1 / 5;
   grid-row: auto;
   /* display */
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5em;
 }
 .art-10:hover{
   cursor: pointer;
@@ -272,12 +248,10 @@ button:hover{
 }
 .art-11{
   /* gallery grid */
-  grid-column: 5 / 9;
   grid-row: auto;
   /* display */
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5em;
 }
 .art-11:hover{
   cursor: pointer;
@@ -294,12 +268,10 @@ button:hover{
 }
 .art-12{
   /* gallery grid */
-  grid-column: 9 / 13;
   grid-row: auto;
   /* display */
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5em;
 }
 .art-12:hover{
   cursor: pointer;
@@ -313,4 +285,255 @@ button:hover{
   display: none;
   padding: 1.5em;
   padding-bottom: 2.5em;
+}
+
+/* Add Here styles for larger phones and tablets *//* Add Here styles for larger phones and tablets */
+@media (min-width:30em) {
+  /* gallery main wrapper */
+  .gallery-main-wrapper{
+    /* main gallery grid */
+    grid-column: 1 / 13;
+    /* gallery grid */
+    grid-template-columns: 1fr;
+    grid-row-gap: 1.25em;
+  }
+}
+
+/* Add Here styles for smaller laptops, larger tablets and small screens */
+@media (min-width:48em) {
+  /* gallery main wrapper */
+  .gallery-main-wrapper{
+    /* main gallery grid */
+    grid-column: 1 / 13;
+    /* gallery grid */
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-row-gap: 1.25em;
+    /* display */
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  /* galleries */
+  .art-1{
+    /* gallery grid */
+    grid-column: 1 / 7;
+  }
+  .art-2{
+    /* gallery grid */
+    grid-column: 7 / 13;
+  }
+  .art-3{
+    /* gallery grid */
+    grid-column: 1 / 7;
+  }
+  .art-4{
+    /* gallery grid */
+    grid-column: 7 / 13;
+  }
+  .art-5{
+    /* gallery grid */
+    grid-column: 1 / 7;
+  }
+  .art-6{
+    /* gallery grid */
+    grid-column: 7 / 13;
+  }
+  .art-7{
+    /* gallery grid */
+    grid-column: 1 / 7;
+  }
+  .art-8{
+    /* gallery grid */
+    grid-column: 7 / 13;
+  }
+  .art-9{
+    /* gallery grid */
+    grid-column: 1 / 7;
+  }
+  .art-10{
+    /* gallery grid */
+    grid-column: 7 / 13;
+  }
+  .art-11{
+    /* gallery grid */
+    grid-column: 1 / 7;
+  }
+  .art-12{
+    /* gallery grid */
+    grid-column: 7 / 13;
+  }
+}
+
+/* Add Here styles for regular laptops and desktops *//* Add Here styles for regular laptops and desktops */
+@media (min-width:62em) {
+  /* gallery main wrapper */
+  .gallery-main-wrapper{
+    /* main gallery grid */
+    grid-column: 2 / 12;
+    /* gallery grid */
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-gap: 1.25em;
+    grid-row-gap: 1.5em;
+  }
+
+  /* galleries */
+  .art-1{
+    /* gallery grid */
+    grid-column: 1 / 5;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-2{
+    /* gallery grid */
+    grid-column: 5 / 9;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-3{
+    /* gallery grid */
+    grid-column: 9 / 13;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-4{
+    /* gallery grid */
+    grid-column: 1 / 5;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-5{
+    /* gallery grid */
+    grid-column: 5 / 9;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-6{
+    /* gallery grid */
+    grid-column: 9 / 13;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-7{
+    /* gallery grid */
+    grid-column: 1 / 5;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-8{
+    /* gallery grid */
+    grid-column: 5 / 9;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-9{
+    /* gallery grid */
+    grid-column: 9 / 13;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-10{
+    /* gallery grid */
+    grid-column: 1 / 5;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-11{
+    /* gallery grid */
+    grid-column: 5 / 9;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-12{
+    /* gallery grid */
+    grid-column: 9 / 13;
+    /* display */
+    padding: 0.5em;
+  }
+}
+
+/* Add Here styles for xLarge monitors *//* Add Here styles for xLarge monitors */
+@media (min-width:75em) {
+  /* gallery main wrapper */
+  .gallery-main-wrapper{
+    /* main gallery grid */
+    grid-column: 3 / 11;
+    /* gallery grid */
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-gap: 1.25em;
+    grid-row-gap: 1.5em;
+  }
+
+  /* galleries */
+  .art-1{
+    /* gallery grid */
+    grid-column: 1 / 5;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-2{
+    /* gallery grid */
+    grid-column: 5 / 9;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-3{
+    /* gallery grid */
+    grid-column: 9 / 13;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-4{
+    /* gallery grid */
+    grid-column: 1 / 5;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-5{
+    /* gallery grid */
+    grid-column: 5 / 9;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-6{
+    /* gallery grid */
+    grid-column: 9 / 13;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-7{
+    /* gallery grid */
+    grid-column: 1 / 5;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-8{
+    /* gallery grid */
+    grid-column: 5 / 9;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-9{
+    /* gallery grid */
+    grid-column: 9 / 13;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-10{
+    /* gallery grid */
+    grid-column: 1 / 5;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-11{
+    /* gallery grid */
+    grid-column: 5 / 9;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-12{
+    /* gallery grid */
+    grid-column: 9 / 13;
+    /* display */
+    padding: 0.5em;
+  }
 }
