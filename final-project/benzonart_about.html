@@ -52,7 +52,42 @@
       <a href="benzonart_elementofwater.html"><b>Element of Water</b></a>, in which he explores the unique properties of water. In 2020,
       Elijah begins a new series known as <a href="benzonart_identitycrisis.html"><b>Identity Crisis</b></a>. In this series, he challenges the
       idea of identity, referencing personal experiences with others and psychosociological topics. </p>
-      
+
+      <img src="./images/profile.jpg" width="275">
+
+      <p> As a child, Elijah was very involved in art. He has entered artwork into competitions and exhibitions as early as
+      elementary school, winning awards from Association of Christian Schools International (ACSI) competitions. Elijah began
+      incorporating personal experiences into his artwork in high school. His proud accomplishment is winning the Fewster Family
+      Scholarship Award at the 2015 Art Under 20 Show for his drawing Finding Francine, which is found in the
+      <a href="benzonart_archives.html"><b>Archives</b></a> gallery. </p>
+
+      <p> Elijah's journey as an artist took a sudden turn when he decided to pursue pre-medical studies at the University of Miami. His
+      first few semesters of university, Elijah lost his passion in art. However, his passion resparked after taking a class in sculpture.
+      Being unfamiliar with three-dimensional art, the class was a challenged for Elijah, and it fueled his creativity and passion for
+      art. Most of the art he has made in university is found in the <a href="benzonart_latestwork.html"><b>Latest Work</b></a> gallery. </p>
+    </section>
+    <section class="resume">
+      <button type="button" name="button" class="button-open-resume">Click Here to See CV</button>
+      <div class="resume-content">
+        <h2>CV</h2>
+        <h3>Education</h3>
+        Canterbury School, <i> August 2012-May 2016 </i><br>
+        University of Miami, <i> August 2016-May 2020 </i><br><br>
+        <h3>Skills</h3>
+        <b>Proficient:</b> Figure Drawing, Illustrator, Painting <br>
+        <b>Intermediate:</b> Photography, Photoshop <br>
+        <b>Beginner:</b> Glass Blowing, Metalwork, Premiere Pro, Printmaking, Woodshop <br><br>
+        <h3>Professional Experience</h3>
+        Mission Trip to Taal, Philippines, <i>December 2019</i><br>
+        Community Service Trip to Washington D.C., <i>March 2019</i><br>
+        Research Assistant, Early Head Start University Partnership Laboratory, <i>January 2018-December 2019</i><br>
+        Vice President of Operations, Canes Emergency Response Team, <i>January 2018-May 2020</i><br>
+        Mission Trip to Cusco, Peru, <i>March 2018</i><br>
+        Social Media Chair, Locked Dance Team, <i>August 2017-May 2020</i><br>
+        Employee, Millwoods Cedar Dental Clinic, <i>July 2017, 2018</i><br>
+        Mission Trip to Lima, Peru, <i>March 2017</i><br><br>
+        <button type="button" name="button" class="button-close-resume">Close</button>
+      </div>
     </section>
     <!-- the footer -->
     <footer class="footer-main-wrapper">
@@ -88,6 +123,16 @@
         stickyNav();
         $(window).scroll(function() {
           stickyNav();
+        });
+        $(".button-open-resume").click(function() {
+          $(".resume-content").show(500);
+          $(".button-close-resume").show(500);
+          $(".button-open-resume").hide(500);
+        });
+        $(".button-close-resume").click(function() {
+          $(".resume-content").hide(500);
+          $(".button-close-resume").hide(500);
+          $(".button-open-resume").show(500);
         });
       });
     </script>

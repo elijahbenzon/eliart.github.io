@@ -164,6 +164,13 @@ nav a:hover, nav a:focus {
 .introduction-main-wrapper a:visited{
   color: rgb( 44, 62, 80 );
 }
+.introduction-main-wrapper img{
+  /* main grid */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
 
 /* latest content section *//* latest content section *//* latest content section */
 .latest-content-main-wrapper{
@@ -281,6 +288,53 @@ nav a:hover, nav a:focus {
   padding: 0.5em;
 }
 .blog-text a{
+  text-decoration: none;
+}
+
+/* resume *//* resume *//* resume *//* resume *//* resume *//* resume *//* resume */
+.resume{
+  /* main grid */
+  grid-row: auto;
+  /* display */
+  padding: 1em;
+}
+.resume-content{
+  display: none;
+}
+.resume button{
+  background-color: rgb( 23, 32, 42 );
+  border: none;
+  border-radius: 1em;
+  color: white;
+  font-family: 'Barlow', sans-serif;
+  padding: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-decoration: none;
+}
+.button-open-resume{
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+.button-close-resume{
+  display: inline-flex;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+button:hover{
+  background-color: rgb( 44, 62, 80 );
+  border: none;
+  border-radius: 1em;
+  color: white;
+  cursor: pointer;
+  font-family: 'Barlow', sans-serif;
+  padding: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
   text-decoration: none;
 }
 
@@ -432,6 +486,16 @@ nav a:hover, nav a:focus {
     padding-bottom: 1em;
   }
 
+  /* resume */
+  .resume{
+    /* main grid */
+    grid-column: 1 / 13;
+    /* display */
+    padding: 1em;
+    padding-bottom: 3.5em;
+    padding-top: 1em;
+  }
+
   /* footer */
   .footer-outline{
     /* header main wrapper */
@@ -565,6 +629,16 @@ nav a:hover, nav a:focus {
     /* blog grid */
     grid-column: 1 / 13;
     padding-bottom: 1em;
+  }
+
+  /* resume */
+  .resume{
+    /* main grid */
+    grid-column: 2 / 12;
+    /* display */
+    padding: 1em;
+    padding-bottom: 3.5em;
+    padding-top: 1em;
   }
 
   /* footer */
@@ -730,6 +804,16 @@ nav a:hover, nav a:focus {
     margin-left: -2.5em;
   }
 
+  /* resume */
+  .resume{
+    /* main grid */
+    grid-column: 3 / 11;
+    /* display */
+    padding: 1em;
+    padding-bottom: 3.5em;
+    padding-top: 1em;
+  }
+
   /* footer */
   .footer-outline{
     /* header main wrapper */
@@ -845,6 +929,16 @@ nav a:hover, nav a:focus {
     grid-column: 5 / 13;
     /* display */
     margin-left: -2.5em;
+  }
+
+  /* resume */
+  .resume{
+    /* main grid */
+    grid-column: 3 / 11;
+    /* display */
+    padding: 1em;
+    padding-bottom: 3.5em;
+    padding-top: 1em;
   }
 
   /* footer */
