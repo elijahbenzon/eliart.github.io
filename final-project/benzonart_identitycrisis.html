@@ -66,9 +66,21 @@
         <img src="./images/identity-crisis/identity-crisis-1-full-2.jpg" width="550em"/><br>
         <div class="button"><button type="button" name="close" class="button-close">Close</button></div>
       </div>
+      <div class="art-2-info">
+        <h2> Who Am I, Vol. 1 </h2>
+        <p> 2020 <br>
+        Lead HB Pencil, Pyrography (Glass) <br>
+        7 X 5 " </p><br>
+        <img src="./images/identity-crisis/identity-crisis-2-full.jpg" width="550em"/><br>
+        <img src="./images/identity-crisis/identity-crisis-2-full-2.jpg" width="550em"/><br>
+        <div class="button"><button type="button" name="close" class="button-close">Close</button></div>
+      </div>
       <!-- shown -->
       <div class="art-1">
         <img src="./images/identity-crisis/identity-crisis-1-square.jpg" width="275em" class="art-1-image"/>
+      </div>
+      <div class="art-2">
+        <img src="./images/identity-crisis/identity-crisis-2-square.jpg" width="275em" class="art-2-image"/>
       </div>
     </section>
     <!-- the footer -->
@@ -125,12 +137,21 @@
       $(document).ready(function() {
         $(".button-close").click(function() {
           $(".art-1-info").hide(500);
+          $(".art-2-info").hide(500);
         });
         $(".art-1-image").click(function() {
           $(".art-1-info").show(500);
           $([document.documentElement, document.body]).animate({
             scrollTop: $(".art-1-info").offset().top
           }, 2000);
+          $(".art-2-info").hide(500);
+        });
+        $(".art-2-image").click(function() {
+          $(".art-2-info").show(500);
+          $([document.documentElement, document.body]).animate({
+            scrollTop: $(".art-2-info").offset().top
+          }, 2000);
+          $(".art-1-info").hide(500);
         });
       });
     </script>
