@@ -322,13 +322,13 @@ nav a:hover, nav a:focus {
 }
 
 /* Add Here styles for larger phones and tablets *//* Add Here styles for larger phones and tablets */
-@media (min-width:15em) {
+@media (min-width:25em) {
   /* header */
   .header-title{
     /* header grid */
     grid-column: 1 / 13;
     /* display */
-    font-size: 5em;
+    font-size: 3em;
     padding-bottom: 0.5em;
     padding-top: 1.5em;
     text-align: center;
