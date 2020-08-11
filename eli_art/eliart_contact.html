@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- the main meta charset -->
+    <meta charset="utf-8">
+    <!-- meta names -->
+    <meta name="author" content="Eli">
+    <meta name="description" content="Eli's online art portfolio">
+    <meta name="keywords" content="Eli, art, portfolio, drawing, sketches">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- main title -->
+    <title>Eli's Art • Contact</title>
+    <!-- css and font links -->
+    <link rel="stylesheet" href="styles/eliart_styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,600&display=swap" rel="stylesheet">
+    <!-- global site tag (gtag.js) - google analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164002554-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-164002554-1');
+    </script>
+  </head>
+  <body class="main-wrapper">
+    <!-- the header -->
+    <header class="header-main-wrapper">
+      <!-- logo -->
+      <section class="logo">
+        <a href="eliart_main.html"><img src="images/logo_black.png" width="150em"></a>
+      </section>
+      <!-- navigation bar -->
+      <nav class="navigation">
+        <div class="menu-toggle">
+          <div class="hamburger"></div>
+        </div>
+        <ul class="open desktop">
+          <li><a href="eliart_about.html">About</a></li>
+          <li><a href="eliart_portfolio.html">Portfolio</a></li>
+          <li><a href="eliart_blog.html">Blog</a></li>
+          <li><a href="eliart_contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <h1 class="header-title"> Eli's Art </h1>
+    </header>
+    <!-- introduction -->
+    <section class="introduction-main-wrapper">
+      <form action="action_page.php">
+       <div class="container">
+         <h2>Subscribe to My Newsletter</h2>
+         <p>Want to be notified when I have new work? Be sure to sign up below!
+          <br> <i> Note: Currently not set up as of 2020 </i></p>
+       </div>
+       <div class="container" style="background-color:white">
+         <input type="text" placeholder="Name" name="name" required>
+         <input type="text" placeholder="Email address" name="mail" required>
+         <label>
+           <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+         </label>
+       </div>
+       <div class="container">
+         <input type="submit" value="Subscribe">
+       </div>
+      </form>
+    </section>
+    <!-- the footer -->
+    <footer class="footer-main-wrapper">
+      <table class="footer-table">
+        <tr>
+          <th class="footer-table-head"><a href="eliart_main.html"><b>Eli's Art</b></a></th>
+          <th class="footer-table-head"><b> Social Media </b></th>
+        </tr>
+        <tr>
+          <td class="footer-table"><a href="eliart_about.html">About</a></td>
+          <td class="footer-table"><a href="https://www.instagram.com/eli._.127.jpeg/">Instagram</a></td>
+        </tr>
+        <tr>
+          <td class="footer-table"><a href="eliart_portfolio.html">Portfolio</a></td>
+          <td class="footer-table"><a href="https://www.redbubble.com/people/ebenzon/shop?asc=u&ref=account-nav-dropdown">Redbubble</a></td>
+        </tr>
+        <tr>
+          <td class="footer-table"><a href="eliart_blog.html">Blog</a></td>
+        </tr>
+        <tr>
+          <td class="footer-table"><a href="eliart_contact.html">Contact</a></td>
+        </tr>
+      </table>
+      <section class="footer-copyright">
+        © 2020 ELI'S ART
+      </section>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      // sticky navigation bar
+      $(document).ready(function() {
+        var stickyNavTop = $(".navigation").offset().top;
+        var stickyNav = function(){
+          var scrollTop = $(window).scrollTop();
+          if (scrollTop > stickyNavTop) {
+            $(".navigation").addClass("sticky");
+          } else {
+            $(".navigation").removeClass("sticky");
+          }
+        };
+        stickyNav();
+        $(window).scroll(function() {
+          stickyNav();
+        });
+      });
+    </script>
+  </body>
+</html>

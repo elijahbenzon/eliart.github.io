@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- the main meta charset -->
+    <meta charset="utf-8">
+    <!-- meta names -->
+    <meta name="author" content="Eli">
+    <meta name="description" content="Eli's online art portfolio">
+    <meta name="keywords" content="Eli, art, portfolio, drawing, sketches">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- main title -->
+    <title>Eli's Art</title>
+    <!-- css and font links -->
+    <link rel="stylesheet" href="styles/eliart_styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,600&display=swap" rel="stylesheet">
+    <!-- global site tag (gtag.js) - google analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164002554-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-164002554-1');
+    </script>
+  </head>
+  <body class="main-wrapper">
+    <!-- the header -->
+    <header class="header-main-wrapper">
+      <!-- logo -->
+      <section class="logo">
+        <a href="eliart_main.html"><img src="./images/logo_black.png" width="150em"/></a>
+      </section>
+      <!-- navigation bar -->
+      <nav class="navigation">
+        <div class="menu-toggle">
+          <div class="hamburger"></div>
+        </div>
+        <ul class="open desktop">
+          <!-- links -->
+          <li><a href="eliart_about.html">About</a></li>
+          <li><a href="eliart_portfolio.html">Portfolio</a></li>
+          <li><a href="eliart_blog.html">Blog</a></li>
+          <li><a href="eliart_contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <h1 class="header-title"> Eli's Art </h1>
+    </header>
+    <!-- introduction -->
+    <section class="introduction-main-wrapper">
+      <!-- article title -->
+      <h2> Welcome to Eli's Art </h2>
+      <!-- first introduction paragraph -->
+      <p> You are visiting the portfolio and blog of Eli, that's me! I am an independent artist and recent college graduate
+      looking to further my studies into medical illustration. Most of my artwork consists of realistic depictions, especially
+      portraits, the human figure, and still lifes, but I sometimes experiment with abstract and contemporary designs. I mainly
+      create graphite drawings, but I also enjoy painting, sculpture, and electronic media. </p>
+      <!-- "about" entry -->
+      <p class="entry-1"> <b> My Journey as an Artist </b><br><br> Eli's journey as an artist, like any artist, began with an innate
+      passion to create and a blooming curiosity of the world. As a child, Eli was heavily involved in art, and he further mastered
+      techniques in high school. However, Eli's journey as an artist took a sudden turn once he entered university.
+      <a href="eliart_about.html">— <i>Continue Reading</i></a></p>
+    </section>
+    <!-- latest content section -->
+    <section class="latest-content-main-wrapper">
+      <h3 class="latest-content-title"> Check out my latest content: </h3>
+      <figure class="main-content-1">
+        <a href="eliart_collegework.html"><img src="./images/latest-work/latestwork-1-square.jpg"/></a>
+        <figcaption> WHO AM I, VOL. 2 </figcaption>
+      </figure>
+      <figure class="main-content-2">
+        <a href="eliart_collegework.html"><img src="./images/latest-work/latestwork-2-square.jpg"/></a>
+        <figcaption> ENVIRONMENT </figcaption>
+      </figure>
+      <figure class="main-content-3">
+        <a href="eliart_collegework.html"><img src="./images/latest-work/latestwork-3-square.jpg"/></a>
+        <figcaption> GARDEN (VASE PROTOTYPE) </figcaption>
+      </figure>
+      <figure class="main-content-4">
+        <a href="eliart_collegework.html"><img src="./images/latest-work/latestwork-4-square.jpg"/></a>
+        <figcaption> OCEAN OF TEARS </figcaption>
+      </figure>
+    </section>
+    <section class="introduction-main-wrapper">
+      <!-- "about" entry -->
+      <p class="entry-2"> <b> Latest Blog Entry </b><br><br>Due to the recent events and the pandemic, I have been selling digital designs as a freelancer through
+      the means of Redbubble. Be sure to view, like, and, if you can, purchase some products!
+      <a href="eliart_blog.html">— <i>Continue Reading</i></a></p></p>
+    </section>
+    <!-- the footer -->
+    <footer class="footer-main-wrapper">
+      <table class="footer-table">
+        <tr>
+          <th class="footer-table-head"><a href="eliart_main.html"><b>Eli's Art</b></a></th>
+          <th class="footer-table-head"><b> Social Media </b></th>
+        </tr>
+        <tr>
+          <td class="footer-table"><a href="eliart_about.html">About</a></td>
+          <td class="footer-table"><a href="https://www.instagram.com/eli._.127.jpeg/">Instagram</a></td>
+        </tr>
+        <tr>
+          <td class="footer-table"><a href="eliart_portfolio.html">Portfolio</a></td>
+          <td class="footer-table"><a href="https://www.redbubble.com/people/ebenzon/shop?asc=u&ref=account-nav-dropdown">Redbubble</a></td>
+        </tr>
+        <tr>
+          <td class="footer-table"><a href="eliart_blog.html">Blog</a></td>
+        </tr>
+        <tr>
+          <td class="footer-table"><a href="eliart_contact.html">Contact</a></td>
+        </tr>
+      </table>
+      <section class="footer-copyright">
+        © 2020 ELI'S ART
+      </section>
+    </footer>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript">
+      // hamburger navigation
+      $('.menu-toggle').click(function() {
+        $('ul').toggleClass('opening');
+        $(this).toggleClass('open');
+      })
+      // sticky navigation bar
+      $(document).ready(function() {
+        var stickyNavTop = $(".navigation").offset().top;
+        var stickyNav = function(){
+          var scrollTop = $(window).scrollTop();
+          if (scrollTop > stickyNavTop) {
+            $(".navigation").addClass("sticky");
+          } else {
+            $(".navigation").removeClass("sticky");
+          }
+        };
+        stickyNav();
+        $(window).scroll(function() {
+          stickyNav();
+        });
+      });
+    </script>
+  </body>
+</html>

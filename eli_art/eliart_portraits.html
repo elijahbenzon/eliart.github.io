@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- the main meta charset -->
+    <meta charset="utf-8">
+    <!-- meta names -->
+    <meta name="author" content="Eli">
+    <meta name="description" content="Eli's online art portfolio">
+    <meta name="keywords" content="Eli, art, portfolio, drawing, sketches">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- main title -->
+    <title>Eli's Art • Portraits</title>
+    <!-- css and font links -->
+    <link rel="stylesheet" href="styles/eliart_styles.css">
+    <link rel="stylesheet" href="styles/eliart_portfolio_styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,600&display=swap" rel="stylesheet">
+    <!-- global site tag (gtag.js) - google analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164002554-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-164002554-1');
+    </script>
+  </head>
+  <body class="main-wrapper">
+    <!-- the header -->
+    <header class="header-main-wrapper-portfolio">
+      <!-- logo -->
+      <section class="logo">
+        <a href="eliart_main.html"><img src="./images/logo_black.png" width="150em"/></a>
+      </section>
+      <!-- navigation bar -->
+      <nav class="navigation">
+        <div class="menu-toggle">
+          <div class="hamburger"></div>
+        </div>
+        <ul class="open desktop">
+          <li><a href="eliart_about.html">About</a></li>
+          <li><a href="eliart_portfolio.html">Portfolio</a></li>
+          <li><a href="eliart_blog.html">Blog</a></li>
+          <li><a href="eliart_contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- introduction -->
+    <section class="introduction-main-wrapper">
+      <h1> Portraits </h1>
+      <p><i> In Portraits, Eli displays all his sketches of people, ranging from real-life individuals to personal role models. He
+      explores the balance of light and shadows within these portraits by incorporating different patterns and designs, creating
+      an almost art pop aesthetic. </i></p>
+    </section>
+    <!-- gallery -->
+    <section class="gallery-main-wrapper">
+      <!-- hidden -->
+      <div class="art-1-info">
+        <h2> Kim Younghoon </h2>
+        <p> 2020 <br>
+        Graphite Pencil <br>
+        12 X 9 " </p><br>
+        <img src="./images/portraits/portraits-1-full.jpeg" width="550em"/><br>
+        <div class="button"><button type="button" name="close" class="button-close">Close</button></div>
+      </div>
+      <!-- <div class="art-2-info">
+        <h2> Who Am I </h2>
+        <p> 2020 <br>
+        Lead HB Pencil, Pyrography (Glass) <br>
+        7 X 5 " </p><br>
+        <img src="./images/identity-crisis/identity-crisis-2-full.jpg" width="550em"/><br>
+        <img src="./images/identity-crisis/identity-crisis-2-full-2.jpg" width="550em"/><br>
+        <div class="button"><button type="button" name="close" class="button-close">Close</button></div>
+      </div> -->
+      <!-- shown -->
+      <div class="art-1">
+        <img src="./images/portraits/portraits-1-square.jpg" width="275em" class="art-1-image"/>
+      </div>
+      <!-- <div class="art-2">
+        <img src="./images/identity-crisis/identity-crisis-2-square.jpg" width="275em" class="art-2-image"/>
+      </div> -->
+    </section>
+    <!-- the footer -->
+    <footer class="footer-main-wrapper">
+      <table class="footer-table">
+        <tr>
+          <th class="footer-table-head"><a href="eliart_main.html"><b>Eli's Art</b></a></th>
+          <th class="footer-table-head"><b> Social Media </b></th>
+        </tr>
+        <tr>
+          <td class="footer-table"><a href="eliart_about.html">About</a></td>
+          <td class="footer-table"><a href="https://www.instagram.com/eli._.127.jpeg/">Instagram</a></td>
+        </tr>
+        <tr>
+          <td class="footer-table"><a href="eliart_portfolio.html">Portfolio</a></td>
+          <td class="footer-table"><a href="https://www.redbubble.com/people/ebenzon/shop?asc=u&ref=account-nav-dropdown">Redbubble</a></td>
+        </tr>
+        <tr>
+          <td class="footer-table"><a href="eliart_blog.html">Blog</a></td>
+        </tr>
+        <tr>
+          <td class="footer-table"><a href="eliart_contact.html">Contact</a></td>
+        </tr>
+      </table>
+      <section class="footer-copyright">
+        © 2020 ELI'S ART
+      </section>
+    </footer>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript">
+      // hamburger navigation
+      $('.menu-toggle').click(function() {
+        $('ul').toggleClass('opening');
+        $(this).toggleClass('open');
+      })
+      // sticky navigation bar
+      $(document).ready(function() {
+        var stickyNavTop = $(".navigation").offset().top;
+        var stickyNav = function(){
+          var scrollTop = $(window).scrollTop();
+          if (scrollTop > stickyNavTop) {
+            $(".navigation").addClass("sticky");
+          } else {
+            $(".navigation").removeClass("sticky");
+          }
+        };
+        stickyNav();
+        $(window).scroll(function() {
+          stickyNav();
+        });
+      });
+      // fade in
+      $(document).ready(function() {
+        $(".introduction-main-wrapper").css('display', 'none');
+        $(".introduction-main-wrapper").fadeIn(500);
+        $(".gallery-main-wrapper").css('display', 'none');
+        $(".gallery-main-wrapper").fadeIn(500);
+      });
+      // galleries
+      $(document).ready(function() {
+        $(".button-close").click(function() {
+          $(".art-1-info").hide(500);
+          $(".art-2-info").hide(500);
+        });
+        $(".art-1-image").click(function() {
+          $(".art-1-info").show(500);
+          $([document.documentElement, document.body]).animate({
+            scrollTop: $(".art-1-info").offset().top
+          }, 2000);
+          $(".art-2-info").hide(500);
+        });
+        $(".art-2-image").click(function() {
+          $(".art-2-info").show(500);
+          $([document.documentElement, document.body]).animate({
+            scrollTop: $(".art-2-info").offset().top
+          }, 2000);
+          $(".art-1-info").hide(500);
+        });
+      });
+    </script>
+  </body>
+</html>
