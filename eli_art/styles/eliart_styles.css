@@ -596,7 +596,7 @@ input[type=submit]:hover {
   /* footer */
   .footer-table{
     /* display */
-    grid-column: 1 / 8;
+    grid-column: 1 / 10;
   }
   .footer-copyright{
     /* header main wrapper */
