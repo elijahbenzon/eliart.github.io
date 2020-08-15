@@ -308,7 +308,7 @@ button:hover{
 }
 
 /* Add Here styles for larger phones and tablets *//* Add Here styles for larger phones and tablets */
-@media (min-width: 25em) {
+@media (min-width: 20em) {
   /* gallery main wrapper */
   .gallery-main-wrapper{
     /* main gallery grid */
