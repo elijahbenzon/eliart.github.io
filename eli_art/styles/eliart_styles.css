@@ -365,7 +365,6 @@ nav a:hover, nav a:focus {
   /* display */
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5em;
 }
 .blog-text a{
   text-decoration: none;
@@ -612,6 +611,7 @@ input[type=submit]:hover {
   .footer-table{
     /* display */
     grid-column: 1 / 10;
+    padding-left: 1em;
   }
   .footer-copyright{
     /* header main wrapper */
