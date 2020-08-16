@@ -306,6 +306,106 @@ button:hover{
   padding: 1.5em;
   padding-bottom: 2.5em;
 }
+.art-14{
+  /* gallery grid */
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+}
+.art-14:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-14-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
+.art-15{
+  /* gallery grid */
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+}
+.art-15:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-15-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
+.art-16{
+  /* gallery grid */
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+}
+.art-16:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-16-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
+.art-17{
+  /* gallery grid */
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+}
+.art-17:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-17-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
+.art-18{
+  /* gallery grid */
+  grid-row: auto;
+  /* display */
+  margin-left: auto;
+  margin-right: auto;
+}
+.art-18:hover{
+  cursor: pointer;
+  opacity: 75%;
+}
+.art-18-info{
+  /* galllery grid */
+  grid-column: 1 / 13;
+  grid-row: auto;
+  /* display */
+  display: none;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
 
 /* Add Here styles for larger phones and tablets *//* Add Here styles for larger phones and tablets */
 @media (min-width: 20em) {
@@ -367,6 +467,26 @@ button:hover{
     grid-column: 1 / 13;
   }
   .art-13{
+    /* gallery grid */
+    grid-column: 1 / 13;
+  }
+  .art-14{
+    /* gallery grid */
+    grid-column: 1 / 13;
+  }
+  .art-15{
+    /* gallery grid */
+    grid-column: 1 / 13;
+  }
+  .art-16{
+    /* gallery grid */
+    grid-column: 1 / 13;
+  }
+  .art-17{
+    /* gallery grid */
+    grid-column: 1 / 13;
+  }
+  .art-18{
     /* gallery grid */
     grid-column: 1 / 13;
   }
@@ -436,6 +556,26 @@ button:hover{
     grid-column: 7 / 13;
   }
   .art-13{
+    /* gallery grid */
+    grid-column: 1 / 7;
+  }
+  .art-14{
+    /* gallery grid */
+    grid-column: 7 / 13;
+  }
+  .art-15{
+    /* gallery grid */
+    grid-column: 1 / 7;
+  }
+  .art-16{
+    /* gallery grid */
+    grid-column: 7 / 13;
+  }
+  .art-17{
+    /* gallery grid */
+    grid-column: 1 / 7;
+  }
+  .art-18{
     /* gallery grid */
     grid-column: 7 / 13;
   }
@@ -532,6 +672,36 @@ button:hover{
     /* display */
     padding: 0.5em;
   }
+  .art-14{
+    /* gallery grid */
+    grid-column: 5 / 9;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-15{
+    /* gallery grid */
+    grid-column: 9 / 13;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-16{
+    /* gallery grid */
+    grid-column: 1 / 5;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-17{
+    /* gallery grid */
+    grid-column: 5 / 9;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-18{
+    /* gallery grid */
+    grid-column: 9 / 13;
+    /* display */
+    padding: 0.5em;
+  }
 }
 
 /* Add Here styles for xLarge monitors *//* Add Here styles for xLarge monitors */
@@ -622,6 +792,36 @@ button:hover{
   .art-13{
     /* gallery grid */
     grid-column: 1 / 5;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-14{
+    /* gallery grid */
+    grid-column: 9 / 13;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-15{
+    /* gallery grid */
+    grid-column: 1 / 5;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-16{
+    /* gallery grid */
+    grid-column: 9 / 13;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-17{
+    /* gallery grid */
+    grid-column: 1 / 5;
+    /* display */
+    padding: 0.5em;
+  }
+  .art-18{
+    /* gallery grid */
+    grid-column: 9 / 13;
     /* display */
     padding: 0.5em;
   }
