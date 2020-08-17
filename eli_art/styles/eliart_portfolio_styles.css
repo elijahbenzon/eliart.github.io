@@ -797,25 +797,25 @@ button:hover{
   }
   .art-14{
     /* gallery grid */
-    grid-column: 9 / 13;
+    grid-column: 5 / 9;
     /* display */
     padding: 0.5em;
   }
   .art-15{
     /* gallery grid */
-    grid-column: 1 / 5;
+    grid-column: 9 / 13;
     /* display */
     padding: 0.5em;
   }
   .art-16{
     /* gallery grid */
-    grid-column: 9 / 13;
+    grid-column: 1 / 5;
     /* display */
     padding: 0.5em;
   }
   .art-17{
     /* gallery grid */
-    grid-column: 1 / 5;
+    grid-column: 5 / 9;
     /* display */
     padding: 0.5em;
   }
